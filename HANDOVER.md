@@ -89,6 +89,13 @@ and each assessment attempt to a Google Sheet. The dashboard at `dashboard.html`
 the same data and shows an engineer-by-module grid, assessment results and overall
 completion. While `trackingUrl` is empty, none of this happens — no gate, no reporting.
 
+**Status: set up and live as of 3 August 2026.** The spreadsheet is "Project Rose
+training tracking", the deployed endpoint is in `config.js`, and the dashboard access
+key is held by the project manager (it is deliberately not stored in this repository).
+The steps below are the record of how it was built — follow them again only if the
+endpoint is rebuilt, most likely when moving it to a Celestra-owned Google account
+(see the caveat at the end of this section).
+
 One-time setup (about fifteen minutes, done from a Google account — one created with
 the Celestra address is fine):
 
@@ -115,6 +122,25 @@ complete something. To rotate the key, change `SECRET` and redeploy the web app
 (Deploy → Manage deployments → edit → new version).
 
 To see the dashboard without any data or setup: `dashboard.html?demo`.
+
+Two things learned building this, worth knowing before touching the script:
+
+- Google Sheets reinterprets values on write. A module list of "1 2 7" becomes a date
+  and a mobile number loses its leading zero. `writeRow_` therefore formats the target
+  row as plain text *before* writing, and formats the timestamp column explicitly so it
+  keeps its time. Do not replace it with `appendRow` — that was the original bug.
+- Apps Script deployments take a minute or two to propagate; requests 404 in the
+  meantime. If the dashboard shows an HTTP error straight after a redeploy, wait and
+  refresh before assuming anything is broken. The dashboard sends its request with
+  credentials omitted, because Google session cookies can otherwise route it into a
+  signed-in context that 404s.
+
+**Data home caveat.** The tracking sheet currently lives on a personal Google account
+(andy739cbm@gmail.com), not a Celestra one, and it holds contractor names, mobile
+numbers and email addresses. For UK GDPR this should move to a Celestra-owned Google
+account before real engineers use it: repeat the setup steps above on that account,
+put the new web app URL in `config.js`, and delete the old sheet. Deploying afresh
+issues a new endpoint URL and a new key — both need updating together.
 
 ## When the installation guide is revised
 
@@ -173,7 +199,10 @@ LMS without rework.
 - From the printer cabling guide v2.1: the printer's mains socket location and the
   paper-roll direction for the model, and whether all splitter boxes arrive made up
   (bare punch-down blocks = stop and call).
-- The Microsoft Forms URL (results capture runs in fallback mode until set).
+- The Microsoft Forms URL (assessment results capture runs in fallback mode until set —
+  note that progress tracking is separate and is now live).
+- Moving the tracking sheet to a Celestra-owned Google account (see the data home
+  caveat above).
 
 Resolved 3 August 2026: the receipt printer is existing kit — its feed lead is reused
 through the splitter (printer cabling guide v2.1). Module 6 was rewritten against that
