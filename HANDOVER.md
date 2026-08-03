@@ -132,8 +132,12 @@ LMS without rework.
 - Retention period for assessment records — privacy notice shows a visible
   "to be confirmed" marker until supplied.
 - What "WBD" stands for in the end-of-day list (Module 4 presents it as-is).
-- Whether the Epson TM88 receipt printer is existing kit re-connected or a new install
-  (Modules 6 and 9 are worded to be true either way).
 - Testing procedure after pilot 2 (Module 8 + its six held questions).
-- Splitter mounting detail and printer quirks from the test-lab sessions.
+- From the printer cabling guide v2.1: the printer's mains socket location and the
+  paper-roll direction for the model, and whether all splitter boxes arrive made up
+  (bare punch-down blocks = stop and call).
 - The Microsoft Forms URL (results capture runs in fallback mode until set).
+
+Resolved 3 August 2026: the receipt printer is existing kit — its feed lead is reused
+through the splitter (printer cabling guide v2.1). Module 6 was rewritten against that
+guide, which also corrected the connector spec: RJ12 six-pin throughout, no RJ11.

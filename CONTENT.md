@@ -68,7 +68,7 @@ The kit was delivered three to five days before the night: the new kitchen print
 
 ### What you bring
 
-- Basic hand tools, and power tools that let you fix the splitter box to a wooden panel — a drill/driver and bits.
+- Basic hand tools, and power tools to mount the splitter box — a drill/driver and bits.
 - A charged phone with Microsoft Teams and WhatsApp installed and working. Everything on the night runs through group chats — there are no phone calls, because of the number of sites running at once.
 - A personal contactless bank card. You prove each PED works with a 1p test transaction, refunded immediately. No card means you cannot complete the PED testing.
 - Photo ID, and yourself presentable — you are working inside a trading hotel.
@@ -111,7 +111,7 @@ type: single
 
 ### The site is still open when you get there
 
-You arrive at 20:30 and the restaurant will still be trading. That is expected. Sign in as your site pack directs, find the duty manager, and introduce yourself.
+You arrive at 20:30 and the restaurant will still be trading. That is expected. Sign in as your site pack directs, find the duty manager, introduce yourself, and complete your risk assessment before you start anything.
 
 Do the evening handover with the manager before the team leaves:
 
@@ -298,60 +298,108 @@ type: single
 
 ## Module 6: Kitchen printer and splitter
 
-With the KMS gone, orders reach the kitchen through a new kitchen printer — an Epson U220. It connects back to the tills through data cabling that was installed in the weeks before the night, and through a 4-way splitter box that you fit at Till 1. The receipt printer at the bar (an Epson TM88) also connects through the splitter.
+With the KMS gone, orders reach the kitchen through a new kitchen printer — an Epson U220. The receipt printer at the bar already prints: one feed lead runs to it, USB in the till, RJ12 in the printer, usually silver. Tonight you put the splitter box in between and run a new leg to the kitchen.
 
-### Where things go
+![The till station at the bar: the till on its stand with the existing receipt printer beside it](assets/till-station.jpg)
 
-- The kitchen printer's position was chosen at the site survey and is shown in your site pack. Confirm the position with the manager during the evening handover — then it goes where the pack says.
-- The splitter box is fitted at Till 1, fixed to a wooden panel. This is the drilling — do it as early in the night as you can.
+### Before you change anything
 
-### How it connects
+While the site is closing, check every till and printer on site is working, and report any fault in your group chat before you touch a thing. A fault found before you start is the site's problem; one found after, everyone assumes is yours.
 
-The connections are on your site schematic, and they follow this pattern:
+### The connectors — six pins, never four
 
-![Wiring diagram: at Bar 1, Till 1 connects by USB-to-RJ11 into the 4-way splitter; the splitter connects by RJ45 to wall Ethernet Port 2, and by RJ11 to the IDN1 port on receipt printer RP 1. In the restaurant comms cabinet, patch panel 1 port 2 links by RJ45 to patch panel 2 port 3. In the kitchen, wall Ethernet Port 3 connects by RJ12 to the IDN1 port on kitchen printer KP 1](assets/printer-wiring.png)
+Every printer lead is RJ12, six-pin. Hold each plug to the light and count six gold contacts.
 
-- At the bar: Till 1 connects into the splitter (USB to RJ11). From the splitter, one lead goes to the wall data socket (RJ45), and one goes to the receipt printer's IDN1 port (RJ11).
-- In the comms cabinet: patch the marked ports together as your site schematic shows.
-- In the kitchen: the printer connects from the wall data socket to its IDN1 port (RJ12).
+!! No 4-pin telephone leads. They fit the socket, and the printer stays dead. Six gold contacts, or it does not get plugged in.
 
-!! In the comms cabinet, touch nothing except the ports on your schematic. Everything else in that cabinet is running the hotel.
+Your delivered lead kit: the silver USB-to-RJ12 feed lead is already in place at the till; two black RJ12-to-RJ12 leads (2 m); two RJ45 patch leads, straight not crossover (2 m); and a short patch lead for the comms cabinet. Lay them out and check them before you start, and carry one known-good RJ12 and RJ45 spare.
 
-The names on the diagram — Till 1, RP 1, KP 1, IDN1, the port numbers — are the labelling convention. Label what you install to match your site schematic, so the next engineer and the support team can talk about the same socket by the same name.
+### The change — four moves
 
-### The cabling is already there
+1. Unplug the feed lead's RJ12 end from the receipt printer. The USB end stays in the till. Keep this lead.
+2. Mount the splitter box next to the existing data outlet, somewhere you can reach it again.
+3. The loose RJ12 end goes into splitter socket T1.
+4. New leads: RP1 back to the receipt printer, TK1 on to the bar outlet.
 
-The data runs between the bar, the comms cabinet and the kitchen were cabled in advance. You patch and connect — you do not run cables.
+!! If the receipt printer stops printing after this, the fault is what you just did — not the printer.
 
-!! If a cable run or data socket your schematic relies on is missing, dead or damaged — stop that task and raise it in your group chat. Do not improvise a route, and do not drill anything beyond the splitter panel.
+### Know the splitter box
 
-> To confirm: the fine detail of the splitter mounting and the known quirks of a reluctant printer are being written up from the test-lab sessions. Anything that changes will reach you as an addendum with your site pack. Proving the printer prints is covered in Module 8, Testing.
+![The 4-way splitter box: a white wall-mount unit with four black 8-pin sockets in a row and white punch-down blocks above them](assets/splitter-box.jpg)
+
+Four 8-pin sockets, factory labelled T1, RP1, TK1 and spare, left to right. If the labels have worn off, write them back on. The cores are linked across the white punch-down blocks — that link is the splitter. Do not repunch or move anything on the blocks.
+
+!! If the blocks are bare, the box has not been made up. Stop and raise it in your group chat.
+
+### The route — bar is the 2s, kitchen is the 3s
+
+![Wiring diagram: at Bar 1, Till 1 connects by USB-to-RJ12 into the 4-way splitter; the splitter connects by RJ45 to wall Port 2, and by RJ12 to the IDN1 port on receipt printer RP 1. In the restaurant comms cabinet, patch panel 1 port 2 links to patch panel 2 port 3. In the kitchen, wall Port 3 connects by RJ12 to the IDN1 port on kitchen printer KP 1](assets/printer-wiring.png)
+
+1. The feed lead from Till 1 into splitter socket T1 — nothing new is fitted at the till.
+2. Black RJ12 lead from socket RP1 into the receipt printer's IDN1 port. IDN1, not IDN2 — read the label.
+3. RJ45 lead from socket TK1 into the bar outlet's empty jack, Port 2. The lead already in that outlet is the live till network — do not unplug or move it.
+4. In the comms cabinet: patch Panel 1 Port 2 across to Panel 2 Port 3.
+5. In the kitchen: black RJ12 lead from wall Port 3 into the kitchen printer's IDN1. The six-pin plug sits centrally with a gap either side — that is correct, not loose.
+
+The structured runs between the bar outlet, the comms cabinet and the kitchen outlet were cabled in the weeks before the night — you are borrowing them as plain copper. You patch and connect only: no new cable is ever run, and nothing is drilled beyond mounting the splitter. A dead or missing outlet is raised in your group chat, not worked around.
+
+If outlet or panel labels are worn or missing, tone them out first — never guess.
+
+!! The comms cabinet run carries IDN, not Ethernet. Neither port goes anywhere near a switch — patch it to live kit and nothing works. Touch nothing else in that cabinet.
+
+### Site the kitchen printer
+
+Flat, dry and cool — away from the fryer, steam, heat and splash. Cable off the walkway, paper roll clear of the underside, black mains lead into a 3-pin socket. Site it, load the roll, plug in the PSU. If the position fails these rules, stop and raise it — do not improvise a new position.
+
+> To confirm from the test lab: the printer's mains socket location and the paper-roll direction for this model. An addendum comes with your site pack if anything changes.
+
+### Restart, then prove it
+
+1. Kitchen printer on first, then restart the till — a running till will not see a new printer until it restarts.
+2. Print a receipt at RP 1.
+3. Fire a test order through to KP 1.
+
+Do not sign this job off on the receipt printer alone — the kitchen leg is the job.
+
+### Before you move on
+
+Splitter sockets reading T1, RP1, TK1 with the fourth free; panel ports labelled at both ends; photograph the splitter and both panels; record completion via your site QR code; every run clipped or tied so nothing hangs where staff work.
+
+### If it does not work
+
+- Kitchen dead, receipt fine: the fault is TK1 onwards — swap lead 5, then 4, then 3.
+- Both dead: the till end — prove the splitter by putting the receipt printer's lead straight onto the USB converter.
+- Receipt dead, kitchen prints: lead 2 out of RP1, or the printer itself.
+- Was working, now dead: the cabinet has been re-patched — check Port 2 to Port 3.
+- Intermittent under load: a trapped or crushed lead — replace it, do not reseat it.
+
+Work back along the numbers. Leave errors on screen, escalate, and never experiment.
 
 ```check
-q: Where does the kitchen printer go?
+q: Where does the silver feed lead's loose RJ12 end go after you unplug it from the receipt printer?
 type: single
-- [x] The position in your site pack from the site survey, confirmed with the manager at the evening handover. :: Right. The survey chose it, the pack records it, the manager confirms it. Not a choice invented at 2am.
-- [ ] Wherever there is a free socket in the kitchen. :: The position was chosen at survey and is in your site pack. The socket follows the position, not the other way round.
-- [ ] Next to the fryers, where the kitchen staff can see it. :: The position comes from the site pack — and beside the fryers is exactly the kind of spot a survey avoids.
-- [ ] The manager decides on the night. :: The manager confirms the surveyed position; they do not pick a new one. If the surveyed position is genuinely unworkable, raise it in your group chat.
+- [x] Into splitter socket T1 — it is the feed, and everything hangs off it. :: Right. USB end stays in the till, RJ12 end into T1. Nothing new is fitted at the till.
+- [ ] Into the receipt printer's IDN2 port. :: The receipt printer gets a new black RJ12 lead from socket RP1 into IDN1 — the feed lead itself goes into splitter socket T1.
+- [ ] Into the bar wall outlet. :: The bar outlet takes the RJ45 lead from socket TK1. The feed lead goes into T1.
+- [ ] In the bin — it is replaced by new leads. :: Keep it. The feed lead is reused: USB stays in the till, RJ12 end into splitter socket T1.
 ```
 
 ```check
-q: What plugs into the 4-way splitter at Till 1?
+q: A lead in your kit has a plug that fits the printer socket but shows only four gold contacts. What is it, and what do you do?
 type: single
-- [ ] Just the till and the kitchen printer, directly. :: The kitchen printer is not at the bar — it connects from the kitchen wall socket. The splitter takes the till, the receipt printer and the lead to the wall data socket.
-- [x] The till, the receipt printer, and the lead to the wall data socket. :: Right. Till 1 in by USB-to-RJ11; out to the receipt printer's IDN1 port, and out to the wall socket that carries the link towards the kitchen.
-- [ ] All the tills at the bar. :: Only Till 1 connects into the splitter. Follow your site schematic for the exact ports.
-- [ ] The KMS controllers. :: The KMS is shut down and removed tonight. The splitter serves Till 1, the receipt printer and the wall link.
+- [x] A telephone lead — do not use it. Every printer lead must be RJ12 with six gold contacts. :: Right. Four-pin leads fit, and the printer stays dead. Hold every plug to the light and count six contacts before you run a lead.
+- [ ] A fast Ethernet lead — fine for the comms cabinet. :: Ethernet is RJ45, eight pins, and only for the TK1 and panel runs. A four-contact plug in a printer socket is a telephone lead, and it will not work.
+- [ ] It is fine as long as it clicks in. :: It will click in — that is the trap. Four contacts means the printer stays dead. Six gold contacts or it does not get used.
+- [ ] Use it for the kitchen leg only. :: No leg uses it. Printer leads are six-pin RJ12 everywhere.
 ```
 
 ```check
-q: The wall socket in the kitchen is dead and the printer will not connect through it. What do you do?
+q: In the comms cabinet, why must the patch between Panel 1 Port 2 and Panel 2 Port 3 never go near a switch?
 type: single
-- [ ] Run a new cable from the comms cabinet — you have the tools. :: You do not run cables, ever. The cabling was done in advance; a dead socket is raised in your group chat, and there are spares and remote support behind you.
-- [x] Stop that task and raise it in your group chat, then carry on with the rest of the night. :: Right. Check your patching against the schematic first, then raise it. No improvised routes, no drilling beyond the splitter panel.
-- [ ] Move the printer to a different room with a working socket. :: The position came from the survey and the site pack. A dead socket is a fault to raise, not a reason to relocate the printer.
-- [ ] Leave it — the site can manage without a kitchen printer. :: At a KMS site the kitchen printer is how orders reach the kitchen from tomorrow. It gets raised and resolved, not abandoned.
+- [x] The run carries IDN, not Ethernet — patched into live network kit, nothing works. :: Right. You are borrowing the structured cabling as plain copper between the bar and the kitchen. Panel port to panel port, touch nothing else.
+- [ ] The switch ports are all full. :: Whether ports are free is irrelevant — this run is IDN, not Ethernet, and it must go panel to panel.
+- [ ] Switches are too fast for printers. :: Speed is not the issue. IDN is not Ethernet at all — a switch port is simply the wrong thing to connect it to.
+- [ ] It can go to a switch if the panels are full. :: Never. Panel 1 Port 2 to Panel 2 Port 3, nothing else, and nothing else in the cabinet gets touched.
 ```
 
 ## Module 7: The migration script
@@ -699,7 +747,7 @@ type: single
 3. Reboot the Micros server (check the hostname against your site pack), then every till and T&A clock — all on.
 4. KMS sites: shut down the KMS server by Remote Desktop, then power off the controllers.
 5. Check the four retained PEDs — two Lane/3000, two A920. Wrong logo: run the config update. Passcode is in your site pack.
-6. Fit the splitter at Till 1 (drill early — guests are asleep). Connect and patch per your schematic. Kitchen printer in the surveyed position.
+6. Splitter by the bar data outlet (drill early — guests are asleep). Feed lead into T1, RP1 to receipt printer IDN1, TK1 to bar outlet. Panels: Port 2 to Port 3. Kitchen: Port 3 to KP 1 IDN1. Printer on first, then restart the till.
 7. PREPARE — everything ON. Then OK, lock the server, shut down every till and clock.
 8. MIGRATE — everything OFF. Touch only the mouse. Then OK, lock, turn everything on. "ISL error File Not Authorized" is the one expected error — OK it.
 9. POST — then close the windows and log off.
@@ -728,7 +776,9 @@ Teams and WhatsApp only — no phone calls. When raising: site number, exact err
 ### Do not
 
 - Do not start the script before end of day is confirmed.
-- Do not run cables or drill anything beyond the splitter panel.
+- Do not run cables or drill anything beyond mounting the splitter.
+- Do not use 4-pin telephone leads — six gold contacts on every printer plug.
+- Do not patch the printer run into a switch — it is IDN, not Ethernet.
 - Do not touch anything in the comms cabinet except your schematic's ports.
 - Do not do PED work if there are no PED keys on site — raise it.
 - Do not factory reset a PED. Do not power-cycle to clear errors.

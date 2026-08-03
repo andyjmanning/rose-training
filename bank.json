@@ -246,11 +246,11 @@
   "module": 6,
   "type": "single",
   "held": false,
-  "text": "How is the splitter box mounted?",
+  "text": "Where is the splitter box mounted?",
   "options": [
-   "Velcroed under the bar.",
-   "Screwed inside the comms cabinet.",
-   "Fixed to a wooden panel at Till 1 — this is the drilling, done early in the night.",
+   "Inside the comms cabinet.",
+   "On the kitchen wall next to the new printer.",
+   "Next to the existing data outlet at the bar, somewhere you can reach it again.",
    "Left loose behind the till."
   ],
   "key": "556d5034ae88a6ecd66923994be9695953349d402411a034ae2e04d001ceebeb"
@@ -277,8 +277,8 @@
   "text": "What is the connection marked \"?\" — from the splitter to the receipt printer's IDN1 port?",
   "options": [
    "An RJ45 patch lead.",
-   "An RJ11 to RJ11 lead.",
-   "An RJ12 to RJ12 lead.",
+   "A black RJ12 to RJ12 lead, six-pin.",
+   "A 4-pin telephone lead.",
    "A USB cable."
   ],
   "key": "eb56ef5e73405c82064c5da18f58df9615c740576c9fb4e8417401362cdade2f",
@@ -292,8 +292,8 @@
   "held": false,
   "text": "What is the rule inside the comms cabinet?",
   "options": [
-   "Re-patch anything that looks wrong.",
-   "Touch nothing except the ports on your site schematic — everything else is running the hotel.",
+   "Patch the run into a free switch port so the printer joins the network.",
+   "Patch only the two marked panel ports together — the run carries IDN, not Ethernet, and must never be patched into a switch.",
    "Power-cycle the switch to refresh it.",
    "Tidy the cabling while you are in there."
   ],
@@ -318,12 +318,12 @@
   "module": 6,
   "type": "multi",
   "held": false,
-  "text": "What connects through the 4-way splitter at Till 1? Select all that apply.",
+  "text": "What connects into the splitter box? Select all that apply.",
   "options": [
-   "Till 1, by USB to RJ11.",
+   "The feed lead from Till 1 — USB at the till, RJ12 into socket T1.",
    "The KMS controllers.",
-   "The receipt printer's IDN1 port.",
-   "The wall data socket that carries the link towards the kitchen.",
+   "The receipt printer's IDN1 port, from socket RP1.",
+   "The bar wall outlet that carries the link towards the kitchen, from socket TK1.",
    "The kitchen printer, directly."
   ],
   "key": "adffd29612c3dc5e51ccab53d4889f82192414120bc0830fd1d53075b3d97638"
@@ -336,7 +336,7 @@
   "text": "A data socket your schematic relies on is dead. What do you do?",
   "options": [
    "Move the printer to a different socket in another room.",
-   "Check your patching against the schematic, then stop that task and raise it — no improvised cabling, no drilling beyond the splitter panel.",
+   "Check your patching against the schematic, then stop that task and raise it — no improvised cabling, nothing drilled beyond mounting the splitter.",
    "Leave the printer unconnected and note it at handover.",
    "Run a replacement cable — you have the tools."
   ],

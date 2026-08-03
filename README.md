@@ -5,8 +5,8 @@ engineers working the Project Rose cutover nights. Plain HTML, CSS and vanilla
 JavaScript — no build step, no framework, no server-side code, no login, no cost.
 
 
-Built from the Rose Cut-Over Process Guide (v0.01) and the signed Celestra Whitbread
-Project SOW (2 March 2026). Eleven modules with practice questions, a 20-question
+Built from the Rose Cut-Over Process Guide (v0.01), the Kitchen Printer Cabling Guide
+(v2.1) and the signed Celestra Whitbread Project SOW (2 March 2026). Eleven modules with practice questions, a 20-question
 randomised assessment (pass mark 90%, unlimited retakes), a printable on-site reference
 card, and an in-browser completion certificate.
 

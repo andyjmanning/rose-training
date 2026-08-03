@@ -34,12 +34,12 @@ Live bank: 63 questions. Held back (Module 8): 6.
 | Q15 | 5 | single | live | Guide: PED Config | Which PEDs need the logo check? |
 | Q16 | 6 | single | live | PM answer (kit list) | What model is the new kitchen printer? |
 | Q17 | 6 | single | live | SOW 3.3 | Who decides where the kitchen printer is installed? |
-| Q18 | 6 | single | live | PM answers 13/16 | How is the splitter box mounted? |
+| Q18 | 6 | single | live | Printer guide v2.1 step 4 | Where is the splitter box mounted? |
 | Q19 | 6 | single | live | SOW 3.1.2 | Who ran the data cabling between the bar, the comms cabinet and the kitchen? |
-| Q20 | 6 | image | live | Guide: wiring diagram | What is the connection marked "?" — from the splitter to the receipt printer's IDN1 port? |
-| Q21 | 6 | single | live | PM prompts file; Module 6 | What is the rule inside the comms cabinet? |
+| Q20 | 6 | image | live | Printer guide v2.1 leads 2/5; wiring diagram | What is the connection marked "?" — from the splitter to the receipt printer's IDN1 port? |
+| Q21 | 6 | single | live | Printer guide v2.1 lead 4 | What is the rule inside the comms cabinet? |
 | Q22 | 6 | single | live | Guide: wiring diagram | In the kitchen, the printer connects from the wall data socket to which port on the printer? |
-| Q23 | 6 | multi | live | Guide: wiring diagram | What connects through the 4-way splitter at Till 1? Select all that apply. |
+| Q23 | 6 | multi | live | Printer guide v2.1 route; wiring diagram | What connects into the splitter box? Select all that apply. |
 | Q24 | 6 | single | live | SOW 3.1.2; PM answer 13 | A data socket your schematic relies on is dead. What do you do? |
 | Q25 | 7 | order | live | Guide: Script Cut-Over | Put the migration script stages in the order you run them. |
 | Q26 | 7 | single | live | Guide: Script Cut-Over | What state are the tills and T&A clocks in when you select Prepare? |
