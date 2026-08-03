@@ -20,7 +20,7 @@ window.ROSE_CONFIG = {
   // reports module completions and assessment attempts to the tracking sheet.
   // Setup steps are in HANDOVER.md; the dashboard at dashboard.html reads the
   // same endpoint with the access key.
-  trackingUrl: "",
+  trackingUrl: "https://script.google.com/macros/s/AKfycby6oaRlUpecpffR2xNebtoKYxPxZUM_qzcW5gp5sAo7752j7WItDo_JWQTu7sdMlj6-4w/exec",
 
   // Assessment settings.
   passMarkPercent: 90,
