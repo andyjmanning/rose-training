@@ -1,0 +1,980 @@
+[
+ {
+  "id": "Q1",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "Which three end-of-day items must the site confirm complete before the night can start?",
+  "options": [
+   "Closing stock, banking and the rota.",
+   "Micros EOD, a backup and a test print.",
+   "WBD, cashing up and locking the cellar.",
+   "Closing stock, Micros EOD and WBD."
+  ],
+  "key": "a316b2c85c44a8021af54a2e10f92524f71f5a28eaa8994b0db12333faeb149a"
+ },
+ {
+  "id": "Q2",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "Before rebooting the Micros server, how do you confirm you are on the right machine?",
+  "options": [
+   "First line confirm it remotely.",
+   "The hostname shown on the desktop matches the Micros server name in your site pack.",
+   "It is the only machine left switched on.",
+   "It is the machine the site team point you to."
+  ],
+  "key": "e571c015694edd38c8e0f8868c14a6aae1d85dfa215bc642e20007fd80f83435"
+ },
+ {
+  "id": "Q3",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "Which tills and clocks are rebooted during the pre-requisites?",
+  "options": [
+   "Every till and every T&A clock, including the ones being de-installed tonight.",
+   "None — they stay off until after Migrate.",
+   "Only the tills staying after the cutover.",
+   "Only Till 1 and Till 2."
+  ],
+  "key": "8f1b45f19eaa59dc0ca82697f2a9aefbbe00f8ae964cdb5cb9213625e9ce7477"
+ },
+ {
+  "id": "Q4",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "How do you reach the KMS server to shut it down?",
+  "options": [
+   "Remote Desktop from the Micros server — Start, Run, mstsc — using the KMS hostname from your site pack.",
+   "Ask first line to shut it down remotely.",
+   "Unplug it at the wall.",
+   "Walk to the kitchen and press its power button."
+  ],
+  "key": "47c23d4d5b8c2075d5bec5868fb92ca50a623bff0252e2d3591759349d4f3248"
+ },
+ {
+  "id": "Q5",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "In what order does the KMS get shut down?",
+  "options": [
+   "Shut down the KMS server first, then power off the controllers.",
+   "Power off the controllers first, then the server.",
+   "Server and controllers together, at the wall.",
+   "Order does not matter as long as everything is off."
+  ],
+  "key": "68a86b58810c4115bda3a00e4b0941b10a9a2b7a3bb2a0de0d551f9d468c76d0"
+ },
+ {
+  "id": "Q6",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "The site has not run end of day and the manager is leaving. What is the rule?",
+  "options": [
+   "Start the script anyway and note it in iAuditor.",
+   "The night cannot start — raise it in your group chat immediately.",
+   "Leave a note for the day team.",
+   "Run end of day yourself from the Micros server."
+  ],
+  "key": "2d5af4887d57082154080787d0a7d04272a033460c64d92752288c423e9a5c96"
+ },
+ {
+  "id": "Q7",
+  "module": 5,
+  "type": "single",
+  "held": false,
+  "text": "Which payment devices stay at the site after cutover?",
+  "options": [
+   "Two wireless PAX A920 only.",
+   "Two wired Lane/3000 and two wireless PAX A920.",
+   "All PEDs — they are all reconfigured.",
+   "One of each type, chosen on the night."
+  ],
+  "key": "89719a7f0c44f0884cd815787e92fb4d2554a50df46cf51d2cb0f12ccb6aea17"
+ },
+ {
+  "id": "Q8",
+  "module": 5,
+  "type": "single",
+  "held": false,
+  "text": "A PED is being removed. What comes out with it?",
+  "options": [
+   "Nothing else — accessories are collected separately next week.",
+   "Just the device — everything else stays for the new PEDs.",
+   "The till it was paired with.",
+   "Its pole, power pack, dongle, patch lead and plates."
+  ],
+  "key": "53be9e971d3e9fa1786c5edd1fcdd35d6571247d7bf250e8c3897d92781cb56a"
+ },
+ {
+  "id": "Q9",
+  "module": 5,
+  "type": "single",
+  "held": false,
+  "text": "There are no PED keys on site. What does that mean?",
+  "options": [
+   "The whole night is cancelled.",
+   "Ask the manager to force the mounts.",
+   "You can still do the PED work carefully without keys.",
+   "No PED de-install or install can happen — raise it and carry on with the rest of the night."
+  ],
+  "key": "314254c5de91de254260aba305ec84e6ac2cc3435a4145d5480cde986b8cd909"
+ },
+ {
+  "id": "Q10",
+  "module": 5,
+  "type": "order",
+  "held": false,
+  "text": "Put the Lane/3000 wired PED config update steps in order.",
+  "options": [
+   "Select Update",
+   "Select Config",
+   "Press the Menu button",
+   "Select Config"
+  ],
+  "key": "6b232d6f9a0e7694663cad20d171349966969c13960c356e73fb026755322d7d"
+ },
+ {
+  "id": "Q11",
+  "module": 5,
+  "type": "order",
+  "held": false,
+  "text": "Put the PAX A920 wireless PED config update steps in order.",
+  "options": [
+   "Press and hold the Planet logo",
+   "Enter the passcode from your site pack",
+   "From the main screen, press the red cross",
+   "Select Update",
+   "Select Config",
+   "Select Config"
+  ],
+  "key": "d7bebdb3c5110799785846ae4ed21ebf37aa416a51abd957f0516b1fe54e3ef3"
+ },
+ {
+  "id": "Q12",
+  "module": 5,
+  "type": "single",
+  "held": false,
+  "text": "Where does the A920 config passcode come from?",
+  "options": [
+   "Your site pack.",
+   "The site manager.",
+   "This training course.",
+   "It is printed on the back of the PED."
+  ],
+  "key": "760f5700ec64be44706ed341f61f293388fd2e9497905ade05b588bbd318ce7a"
+ },
+ {
+  "id": "Q13",
+  "module": 5,
+  "type": "image",
+  "held": false,
+  "text": "A retained A920 shows this screen. What does it need?",
+  "options": [
+   "Nothing — this is the correct configuration.",
+   "A factory reset.",
+   "The config update from the run book.",
+   "Escalation to first line."
+  ],
+  "key": "125f99e967d6a8c8169cde609877afc24611d0d979ace85e5a038cbf587f3e55",
+  "img": "assets/ped-a920-correct.jpg",
+  "alt": "A PAX A920 wireless PED showing the Premier Inn logo on its screen"
+ },
+ {
+  "id": "Q14",
+  "module": 5,
+  "type": "single",
+  "held": false,
+  "text": "You have run the config update twice and the PED still shows the old brand. What now?",
+  "options": [
+   "Stop and raise it in your group chat — lead first, then first line remotely.",
+   "Swap it for one of the de-installed PEDs.",
+   "Keep re-running the update until it takes.",
+   "Factory reset the device."
+  ],
+  "key": "c53131f828b01133b4c4579d10a7ffa6655329fed307eb636e9374a55c8d3305"
+ },
+ {
+  "id": "Q15",
+  "module": 5,
+  "type": "single",
+  "held": false,
+  "text": "Which PEDs need the logo check?",
+  "options": [
+   "The four retained PEDs — two wired, two wireless.",
+   "Only the wired ones.",
+   "Only the wireless ones.",
+   "Every PED on site including the ones being removed."
+  ],
+  "key": "3243e61c467cb390611df6ba8501a350494bb8c9016cfce78b348580c489ea7b"
+ },
+ {
+  "id": "Q16",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "What model is the new kitchen printer?",
+  "options": [
+   "Epson TM88.",
+   "Zebra ZD420.",
+   "Epson U220.",
+   "PAX A920."
+  ],
+  "key": "0ba43b298972c2bea32248437fe931c6290233c19a5f6d9d153089c74e9b5a2a"
+ },
+ {
+  "id": "Q17",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "Who decides where the kitchen printer is installed?",
+  "options": [
+   "The kitchen staff decide in the morning.",
+   "The site survey chose it — it is in your site pack, and you confirm it with the manager on the night.",
+   "The engineer picks the most convenient socket.",
+   "First line decide remotely."
+  ],
+  "key": "2a6a65298f47098f6c09dcc7bdad51521fdb91a2a98445cf5c4d2e483005ed32"
+ },
+ {
+  "id": "Q18",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "How is the splitter box mounted?",
+  "options": [
+   "Velcroed under the bar.",
+   "Screwed inside the comms cabinet.",
+   "Fixed to a wooden panel at Till 1 — this is the drilling, done early in the night.",
+   "Left loose behind the till."
+  ],
+  "key": "556d5034ae88a6ecd66923994be9695953349d402411a034ae2e04d001ceebeb"
+ },
+ {
+  "id": "Q19",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "Who ran the data cabling between the bar, the comms cabinet and the kitchen?",
+  "options": [
+   "The site's own maintenance team, on request.",
+   "You do, on the night — that is what the power tools are for.",
+   "Cabling teams, in the weeks before the cutover — on the night you patch and connect only.",
+   "Nobody — the printer is wireless."
+  ],
+  "key": "db712f7fe1f97ba8a3972c026e84bd10a884115280de7780169fde2459897b59"
+ },
+ {
+  "id": "Q20",
+  "module": 6,
+  "type": "image",
+  "held": false,
+  "text": "What is the connection marked \"?\" — from the splitter to the receipt printer's IDN1 port?",
+  "options": [
+   "An RJ45 patch lead.",
+   "An RJ11 to RJ11 lead.",
+   "An RJ12 to RJ12 lead.",
+   "A USB cable."
+  ],
+  "key": "eb56ef5e73405c82064c5da18f58df9615c740576c9fb4e8417401362cdade2f",
+  "img": "assets/wiring-question.png",
+  "alt": "The kitchen printer wiring diagram with one connection labelled with a question mark, between the 4-way splitter and the IDN1 port on receipt printer RP 1"
+ },
+ {
+  "id": "Q21",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "What is the rule inside the comms cabinet?",
+  "options": [
+   "Re-patch anything that looks wrong.",
+   "Touch nothing except the ports on your site schematic — everything else is running the hotel.",
+   "Power-cycle the switch to refresh it.",
+   "Tidy the cabling while you are in there."
+  ],
+  "key": "a5c96d4ce8540433d2dea29174cdaaeb84f37a51bdc31230e265d09901fb7fb3"
+ },
+ {
+  "id": "Q22",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "In the kitchen, the printer connects from the wall data socket to which port on the printer?",
+  "options": [
+   "The USB port.",
+   "Ethernet Port 1.",
+   "IDN1.",
+   "The serial console port."
+  ],
+  "key": "8797edbf4b3f36bb9cc6b71d63f4605639a66714e40974e8f09abf306fd5b6a4"
+ },
+ {
+  "id": "Q23",
+  "module": 6,
+  "type": "multi",
+  "held": false,
+  "text": "What connects through the 4-way splitter at Till 1? Select all that apply.",
+  "options": [
+   "Till 1, by USB to RJ11.",
+   "The KMS controllers.",
+   "The receipt printer's IDN1 port.",
+   "The wall data socket that carries the link towards the kitchen.",
+   "The kitchen printer, directly."
+  ],
+  "key": "adffd29612c3dc5e51ccab53d4889f82192414120bc0830fd1d53075b3d97638"
+ },
+ {
+  "id": "Q24",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "A data socket your schematic relies on is dead. What do you do?",
+  "options": [
+   "Move the printer to a different socket in another room.",
+   "Check your patching against the schematic, then stop that task and raise it — no improvised cabling, no drilling beyond the splitter panel.",
+   "Leave the printer unconnected and note it at handover.",
+   "Run a replacement cable — you have the tools."
+  ],
+  "key": "8719ba976e33ddc9b951fbec33f54f1e309dc84c1fc07ed3af4021b9e9b3da94"
+ },
+ {
+  "id": "Q25",
+  "module": 7,
+  "type": "order",
+  "held": false,
+  "text": "Put the migration script stages in the order you run them.",
+  "options": [
+   "Migrate",
+   "Prepare",
+   "Post"
+  ],
+  "key": "d92d15f57681b91e9149ec77fbe5f59bf5670a615790dbd7c8f6ee1c0ddd2342"
+ },
+ {
+  "id": "Q26",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "What state are the tills and T&A clocks in when you select Prepare?",
+  "options": [
+   "Only the retained tills on.",
+   "All switched on.",
+   "All switched off.",
+   "It does not matter."
+  ],
+  "key": "37ff8080349ca3bda463cd50b0dd1e11a6715d94d7d5dc2203e591ed0db067fe"
+ },
+ {
+  "id": "Q27",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "What state are the tills and T&A clocks in when you select Migrate?",
+  "options": [
+   "All switched on.",
+   "Only the de-install tills off.",
+   "All shut down — every till and every clock.",
+   "Rebooting."
+  ],
+  "key": "2e272fc0d38c26f213a2322642eb7802bc9e405e99988bd70e67905826247482"
+ },
+ {
+  "id": "Q28",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "How is the migration script launched?",
+  "options": [
+   "From a USB stick in your kit.",
+   "Right-click \"RBC migration\" in the Migration Scripts folder and select Run as administrator.",
+   "First line launch it remotely.",
+   "Double-click it like any program."
+  ],
+  "key": "e0ca8ea30e22032ca89fda2a2a022f3b27f6f7ddcc11312f05134e878220edbc"
+ },
+ {
+  "id": "Q29",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Which two windows should open when the script starts?",
+  "options": [
+   "Task Manager and File Explorer.",
+   "The Micros dashboard and a command prompt.",
+   "Two copies of the Migration script window.",
+   "CMTrace and the Migration script window."
+  ],
+  "key": "39b13ea96a14bb735b3a4a71027daa1365bce01b9a25c6ba4aea6b7b3ed338c1"
+ },
+ {
+  "id": "Q30",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "How long can the script take to open?",
+  "options": [
+   "Up to an hour.",
+   "It opens instantly or something is wrong.",
+   "Between 1 and 10 minutes — wait for it.",
+   "15 to 20 minutes."
+  ],
+  "key": "4694ee650b9839676cb77ad5e39be2bc23f30cdac8248e0d81675945756ec172"
+ },
+ {
+  "id": "Q31",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Prepare asks you to confirm a list of actions is complete, but one pre-requisite is not done. What do you select?",
+  "options": [
+   "Yes — the list is only advisory.",
+   "No — the script window closes, and you finish the pre-requisites before starting again.",
+   "Close the window with the X instead.",
+   "Yes — you can catch up on the missing step during Migrate."
+  ],
+  "key": "ed83e4b059d3a9770fea719acef10061023916fb80584f1b6a8bd35981112d67"
+ },
+ {
+  "id": "Q32",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Prepare has just completed and you have selected OK. What happens next?",
+  "options": [
+   "Turn the tills back on.",
+   "Log off and take a break.",
+   "Select Migrate straight away.",
+   "Lock the Micros server, then shut down every till and T&A clock — hold the power button on the right of each till."
+  ],
+  "key": "b87a6d6320bfe5b1057fd078c973623b7a7e65d542bdfdfffb8874fc7e9ae461"
+ },
+ {
+  "id": "Q33",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "While Migrate is running, what are you allowed to touch?",
+  "options": [
+   "The keyboard, to check progress.",
+   "The tills, to get a head start on de-install.",
+   "Nothing at all, including the mouse.",
+   "Only the mouse, and only to stop the screensaver starting."
+  ],
+  "key": "ab363d678c402c427f6116eb58665581b573c7c645d200c15ccc03be7ef27834"
+ },
+ {
+  "id": "Q34",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Migrate has shown no change for ten minutes. What is the rule?",
+  "options": [
+   "Raise it immediately.",
+   "Leave it 15–20 minutes before raising it — slow is normal, and real problems raise themselves in the program.",
+   "Reboot the server.",
+   "Restart the script after five minutes."
+  ],
+  "key": "d8d84b6fa75883b8dec3ffe2e3d276c52dd878ef407a70c09d295badc1db5e3e"
+ },
+ {
+  "id": "Q35",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Which error after Migrate is expected, needing only OK?",
+  "options": [
+   "\"Migration incomplete — retry\".",
+   "\"ISL error File Not Authorized, See 3700d log\".",
+   "\"Database connection refused\".",
+   "Any error on a till being de-installed."
+  ],
+  "key": "930c2029ccfe909365c5eb02456b0f01fa11988061d9ad44426e3c3cd3b9efa1"
+ },
+ {
+  "id": "Q36",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "A till shows an error you do not recognise after Migrate. What do you do?",
+  "options": [
+   "Click OK and carry on.",
+   "Leave the message on screen exactly as it is and raise it in your group chat.",
+   "Reboot the till and see if it comes back.",
+   "Photograph it, then clear it."
+  ],
+  "key": "69beec636e7eeb7eb0fafb6b2677cfd3d2e110245bfe15d055fd47b123ac87fb"
+ },
+ {
+  "id": "Q37",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Migrate has completed and you selected OK. What next?",
+  "options": [
+   "Shut the server down.",
+   "Start the de-install while the tills boot.",
+   "Select Post immediately, then deal with the tills.",
+   "Lock the Micros server, then turn every till and T&A clock back on."
+  ],
+  "key": "d00322b793d8f042e5c90e1e8db94747ee9bc46311d611541b7ad3e3d2c8e3dd"
+ },
+ {
+  "id": "Q38",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "What does completing Post do, besides finishing the script?",
+  "options": [
+   "It emails the manager the results.",
+   "It reboots the tills.",
+   "It automatically notifies the support team that the site is complete.",
+   "It uploads your iAuditor report."
+  ],
+  "key": "32fa23f21119100c1faa647b8cc3ab7d77cd6a5fd0c62d40569a606f0c657c51"
+ },
+ {
+  "id": "Q39",
+  "module": 7,
+  "type": "multi",
+  "held": false,
+  "text": "Which of these are golden rules of the script? Select all that apply.",
+  "options": [
+   "Never re-run a script stage that has part-completed.",
+   "Reboot the server if Migrate is slow.",
+   "If it looks hung, wait 15–20 minutes before raising it.",
+   "Leave error messages on screen and escalate.",
+   "Every till and clock on for Prepare, off for Migrate.",
+   "Keep the tills on during Migrate so you can watch them convert."
+  ],
+  "key": "271b7f18aeae45e0682b7e4712c3f614420b5352e7efc481289bd66d2023380e"
+ },
+ {
+  "id": "Q40",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "After Post completes, how do you leave the Micros server?",
+  "options": [
+   "Close the Migration window and CMTrace, then log off.",
+   "Shut the server down.",
+   "Leave everything open for the day team.",
+   "Lock it with the script still running."
+  ],
+  "key": "75eca468f4c7effdfa87cc91130a0551c0fe175db246aba349bfd780e328d89a"
+ },
+ {
+  "id": "Q41",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Where does the migration script live?",
+  "options": [
+   "On a USB stick in your delivered kit.",
+   "On the site's Micros server, in the Whitbread Migration Scripts folder.",
+   "On your phone, run over Wi-Fi.",
+   "First line push it to the site when you are ready."
+  ],
+  "key": "5aeac7b9192351286020804476efba18d0412d16ac506f593e913a62dc76714e"
+ },
+ {
+  "id": "Q42",
+  "module": 7,
+  "type": "single",
+  "held": false,
+  "text": "Who runs the migration script at your site?",
+  "options": [
+   "It runs automatically at midnight.",
+   "First line run it remotely while you do the printer.",
+   "You do, on site, one stage at a time — nothing runs on its own.",
+   "The last person to leave the site team starts it."
+  ],
+  "key": "583cc2425b4c858bdc887275a4e8ca84d44014db0047b0284cce38c75211f8d5"
+ },
+ {
+  "id": "Q43",
+  "module": 9,
+  "type": "single",
+  "held": false,
+  "text": "When does the de-install happen?",
+  "options": [
+   "The day team do it tomorrow.",
+   "As soon as you arrive, while the site is quiet.",
+   "After the migration and testing.",
+   "Before the script, so Migrate has less to do."
+  ],
+  "key": "d347c83af9d0909d72a6a43e8c58e2abed868bbf756d80f700ec620538f7cb7d"
+ },
+ {
+  "id": "Q44",
+  "module": 9,
+  "type": "single",
+  "held": false,
+  "text": "What gets recorded for every item you remove, and where?",
+  "options": [
+   "Its serial number, in iAuditor, as you de-install.",
+   "Its value, on the box.",
+   "A photo of it, texted to the manager.",
+   "Nothing — the courier scans everything at collection."
+  ],
+  "key": "3352e0de8d46b64901a4462cc5ea6ac156bd84be8650cd9be453b2666efdcb68"
+ },
+ {
+  "id": "Q45",
+  "module": 9,
+  "type": "single",
+  "held": false,
+  "text": "What is written on every box of removed kit?",
+  "options": [
+   "The site's postcode.",
+   "The engineer's name.",
+   "\"Fragile\".",
+   "The Celestra reference."
+  ],
+  "key": "02d7eae684ad064da8c4e97f308ba7dd7b9257f1f02f5afa522209344c0eb27b"
+ },
+ {
+  "id": "Q46",
+  "module": 9,
+  "type": "multi",
+  "held": false,
+  "text": "Which of these stay at the site? Select all that apply.",
+  "options": [
+   "At least one cash drawer.",
+   "The KMS server.",
+   "The wireless access points.",
+   "The host stand laptop.",
+   "Till 2."
+  ],
+  "key": "e743718ad18f85c99cac5b4a81e6a8fe5d5f79d9c100463b6be0d925493aa5d9"
+ },
+ {
+  "id": "Q47",
+  "module": 9,
+  "type": "single",
+  "held": false,
+  "text": "Why does the photo of the boxed kit matter?",
+  "options": [
+   "It confirms the safe location and the box count — the courier collection the next day is scheduled from it.",
+   "It is optional if the manager saw the boxes.",
+   "It is for the site's insurance.",
+   "It proves you tidied up."
+  ],
+  "key": "248ea2e31338e93c3d5b39f5bf91398d5bc8fca6ffec91c0dbcd31901dff071e"
+ },
+ {
+  "id": "Q48",
+  "module": 9,
+  "type": "order",
+  "held": false,
+  "text": "Put the kit recovery steps in order.",
+  "options": [
+   "Write the Celestra reference on every box",
+   "Record each item's serial in iAuditor as you remove it",
+   "Box the kit",
+   "Photograph the boxes in place and send the photo to the project team",
+   "Put the boxes in the agreed safe location"
+  ],
+  "key": "bffa53dc528d308e0700264cebf8eb53874d26e23ce23136e0a505ef89b23e4c"
+ },
+ {
+  "id": "Q49",
+  "module": 10,
+  "type": "single",
+  "held": false,
+  "text": "When do you fill in your iAuditor report?",
+  "options": [
+   "Your lead fills it in for the group.",
+   "At 06:00, before the manager arrives.",
+   "Through the night, as you complete each part of the work.",
+   "After you get home."
+  ],
+  "key": "c30264013e94408f1d275d78cede8182314955b2533f77c730e566b16a8a0c9e"
+ },
+ {
+  "id": "Q50",
+  "module": 10,
+  "type": "single",
+  "held": false,
+  "text": "What does the 06:30 walkthrough with the manager cover?",
+  "options": [
+   "Tills, printers and PEDs shown working, with the test evidence, for joint sign-off.",
+   "Training the morning staff on the new tills.",
+   "The location of the boxes, and nothing else.",
+   "Handing over your tools."
+  ],
+  "key": "554ccb30121cc3d2494a7d18ea2d894ddf2e11983c6345f0e288a92ae942e9ff"
+ },
+ {
+  "id": "Q51",
+  "module": 10,
+  "type": "single",
+  "held": false,
+  "text": "No manager has arrived by 06:30. What is the process?",
+  "options": [
+   "Confirm your iAuditor evidence is complete and submitted, tell your coordinator, and the site is deemed accepted — you leave when the coordinator releases you.",
+   "Leave — your shift is over.",
+   "Wait at the site until a manager appears.",
+   "Get a signature from any member of staff."
+  ],
+  "key": "bf8820197436bbf3cc214f53d9900d2b57b05aba2b583245ffbe428c53cd49b0"
+ },
+ {
+  "id": "Q52",
+  "module": 10,
+  "type": "single",
+  "held": false,
+  "text": "What are the only two ways to leave a site at the end of the night?",
+  "options": [
+   "Signed off by the manager, or after 07:00 regardless.",
+   "Whenever the work is done.",
+   "Signed off by the manager, or released by your coordinator with your evidence submitted.",
+   "Released by your lead, or by first line."
+  ],
+  "key": "8c78ea3d55c152588c73120d56c389fbcf6a1454f096b7e1eda5b2b50602a625"
+ },
+ {
+  "id": "Q53",
+  "module": 10,
+  "type": "multi",
+  "held": false,
+  "text": "Which of these belong in your evidence for the night? Select all that apply.",
+  "options": [
+   "The photo of the boxed kit in its safe location.",
+   "A photo of the inside of the comms cabinet, for reference.",
+   "The serial numbers of removed kit.",
+   "The test receipts.",
+   "A copy of the site's sales report.",
+   "A photo of the installed kitchen printer."
+  ],
+  "key": "bd55991a666f51e5a3a98056eec7fa7f897ba45d658400453ae0a8c49ec6955d"
+ },
+ {
+  "id": "Q54",
+  "module": 10,
+  "type": "single",
+  "held": false,
+  "text": "After your evidence is submitted, how long does Whitbread have to raise a defect on the night's work?",
+  "options": [
+   "A week.",
+   "One hour.",
+   "Until the end of the project.",
+   "One business day."
+  ],
+  "key": "f62158cc45e42f3708ecb5dc6542826342333e3f488de39d83df85e855c22b12"
+ },
+ {
+  "id": "Q55",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "You are stuck. Who do you contact first, and how?",
+  "options": [
+   "Celestra first line, directly.",
+   "Your coordinator, by phone.",
+   "Whitbread Command and Control.",
+   "Your lead engineer, in the group chat."
+  ],
+  "key": "a38eb7f05dd198ec12daa2f581f0f9d4eebe46f1125c1041e0380628b46740ae"
+ },
+ {
+  "id": "Q56",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "Roughly how long do you spend stuck before escalating?",
+  "options": [
+   "Five seconds — escalate everything instantly.",
+   "An hour — give it a proper go first.",
+   "About ten minutes.",
+   "You never escalate; you resolve."
+  ],
+  "key": "61200d8f2e402f18aab0fc48aa9dfb76ede231bea6d190aa0b99bc07146c0c46"
+ },
+ {
+  "id": "Q57",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "How does all communication run on the night?",
+  "options": [
+   "Teams and WhatsApp group chats — no phone calls, because of the number of sites running at once.",
+   "SMS to your coordinator.",
+   "Phone calls for anything urgent.",
+   "Email, so there is a record."
+  ],
+  "key": "25ef4e15897a0f05056e1df1be984e45a004631ad23ef4a67400c9b8d20bff38"
+ },
+ {
+  "id": "Q58",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "Which of these goes to your coordinator rather than up the technical ladder?",
+  "options": [
+   "A cash drawer not recognised in testing.",
+   "A build failure message on the Micros server.",
+   "You cannot get into the site and there is no manager.",
+   "The expected ISL error."
+  ],
+  "key": "62cf2e4893725911b6068d406849388f56244660dd54f84c94390a70d7c5f6c8"
+ },
+ {
+  "id": "Q59",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "Who raises issues into Whitbread platform engineering?",
+  "options": [
+   "Coordinators, for anything unresolved after an hour.",
+   "Only Celestra first line — with the site number, the error on screen and what has been tried.",
+   "Any engineer with a build failure.",
+   "Leads, for their group."
+  ],
+  "key": "7671e2801bcbd29d1d9b49720abcc833b0d3e4c868d2ce767f7d0d3aa37ee646"
+ },
+ {
+  "id": "Q60",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "Till 1 is hardware-dead. What happens?",
+  "options": [
+   "You repair it — that is why you carry tools.",
+   "You swap in a de-installed till.",
+   "Your coordinator logs a priority call with the hardware supplier — four-hour response — and the site trades on the working till meanwhile.",
+   "The cutover is abandoned."
+  ],
+  "key": "4096a893b53e23a758bfb173cda7d55fe29aa2eaf94bbf652f426de16304d067"
+ },
+ {
+  "id": "Q61",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "The kitchen printer will not test. What is the sequence?",
+  "options": [
+   "Leave it for the day team.",
+   "Check power, port and patching against your schematic, then raise it — lead, then first line. Spares are held by the contingency team.",
+   "Swap it with the bar printer.",
+   "Straight to Whitbread platform engineering."
+  ],
+  "key": "4b9eb3884226c0cebf8296e0756601324542b4ae3e47101b6d7e7404d032413b"
+ },
+ {
+  "id": "Q62",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "What must you never do with a site, even at 4am with everything finished?",
+  "options": [
+   "Leave it without telling your coordinator.",
+   "Sit down.",
+   "Eat in the kitchen.",
+   "Message your lead about it."
+  ],
+  "key": "70021078aaddfff74181649811bd9a2df8ac6d8a1a6c4f5729f78956ca88d0db"
+ },
+ {
+  "id": "Q63",
+  "module": 11,
+  "type": "single",
+  "held": false,
+  "text": "What should your first message contain when you raise a technical issue?",
+  "options": [
+   "The site number, the exact error on screen, and what you have already tried.",
+   "A voice note describing the problem.",
+   "Just \"it's broken\" — they will ask questions.",
+   "Your estimated time of arrival home."
+  ],
+  "key": "785605733aba4be85acac0910baecbdbad3c08fd97d9f40c2fcb07a0a7885641"
+ },
+ {
+  "id": "Q64",
+  "module": 8,
+  "type": "single",
+  "held": true,
+  "text": "What exactly is the test order on each till?",
+  "options": [
+   "One of everything on the menu.",
+   "One starter, one main, one dessert and one drink, then PAY.",
+   "A round of drinks.",
+   "Any single item."
+  ],
+  "key": "7150a99689dc663bd161c01d35706ee905d77be8346c375049a20a6bdf8d9017"
+ },
+ {
+  "id": "Q65",
+  "module": 8,
+  "type": "single",
+  "held": true,
+  "text": "Why those four test items?",
+  "options": [
+   "Four items from four categories proves every printer prints what it should.",
+   "It is the manager's standing order.",
+   "Tradition from previous projects.",
+   "They are the cheapest items."
+  ],
+  "key": "8be841725ee8489a0e634e85737725b94165ba11d2f83e6f52d95ebc21ba9f02"
+ },
+ {
+  "id": "Q66",
+  "module": 8,
+  "type": "single",
+  "held": true,
+  "text": "How do you confirm a till is ready before the test order?",
+  "options": [
+   "First line confirm it remotely.",
+   "It boots without errors.",
+   "Function, Start Till, confirm the employee AGP Test is shown, then Cancel.",
+   "Print a blank receipt."
+  ],
+  "key": "21fd8fa610e42ef6ed3994016796a3a6dd2c28ae777cb551222625fed9bb9947"
+ },
+ {
+  "id": "Q67",
+  "module": 8,
+  "type": "single",
+  "held": true,
+  "text": "How is each PED tested?",
+  "options": [
+   "Tap your site pack QR code on it.",
+   "A £10 payment, refunded next week.",
+   "A 1p payment on your own contactless card, refunded immediately — receipts kept.",
+   "A test card from the kit box."
+  ],
+  "key": "6219d26ed8ac776138d020666ca6185ab49054c47d340203c9c5bfe165566160"
+ },
+ {
+  "id": "Q68",
+  "module": 8,
+  "type": "single",
+  "held": true,
+  "text": "On a Band 2 site, where are the food categories?",
+  "options": [
+   "On the second till only.",
+   "All food is on one screen.",
+   "Under the Function menu.",
+   "Starters, Mains and Desserts are navigated from the left-hand side menu."
+  ],
+  "key": "eb27b0b0e46c47d6f5ea209b437b1d0702b0074a81879e0f3fe168218bcc0bf1"
+ },
+ {
+  "id": "Q69",
+  "module": 8,
+  "type": "single",
+  "held": true,
+  "text": "What happens to the receipts from testing?",
+  "options": [
+   "Kept — they are the evidence behind your iAuditor report and the 06:30 handover.",
+   "Left in the till drawer.",
+   "Posted to Celestra.",
+   "Binned once the tests pass."
+  ],
+  "key": "7c615de7a1bb0b5f0305c4f076bf8db7bba01d35e7e0e1b0823b4a993e24e39b"
+ }
+]

@@ -1,0 +1,253 @@
+/* Project Rose training — mobile first, WCAG AA, no frameworks. */
+
+:root {
+  /* Celestra navy and grey, sampled from the logo artwork in the branding pack */
+  --navy: #0D2D6E;
+  --brand-grey: #797C82;
+  --ink: #23221f;
+  --muted: #575550;
+  --bg: #ffffff;
+  --card: #f5f4f1;
+  --line: #d9d7d2;
+  --red: #C8102E;
+  --red-bg: #fdf1f3;
+  --green: #1e6b34;
+  --green-bg: #eef6f0;
+  --note-bg: #eef1f8;
+  --focus: #1a56b0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --navy: #a9bcec;
+    --ink: #eae8e4;
+    --muted: #b3b1ac;
+    --bg: #17171c;
+    --card: #222229;
+    --line: #3a3a44;
+    --red: #ff97a8;
+    --red-bg: #33161c;
+    --green: #8fd3a3;
+    --green-bg: #16291c;
+    --note-bg: #20242f;
+    --focus: #8ab4ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.wrap { max-width: 40rem; margin: 0 auto; padding: 0 1rem; }
+
+/* Skip link */
+.skip {
+  position: absolute; left: -999px; top: 0;
+  background: var(--navy); color: #fff; padding: 0.6rem 1rem; z-index: 10;
+}
+.skip:focus { left: 0; }
+
+/* Header / footer */
+.site-head {
+  /* starfield from the Project Rose pack cover, under a navy overlay for contrast */
+  background: linear-gradient(rgba(13, 45, 110, 0.55), rgba(13, 45, 110, 0.7)),
+    #0D2D6E url("../assets/starfield.jpg") center / cover no-repeat;
+  color: #fff; padding: 1.1rem 0;
+}
+.site-head .wrap { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.site-head .logo { height: 2.1rem; width: auto; display: block; }
+.project { font-size: 0.95rem; }
+.project { font-size: 0.85rem; opacity: 0.92; }
+.site-foot { border-top: 1px solid var(--line); margin-top: 3rem; padding: 1rem 0 2.5rem; color: var(--muted); font-size: 0.85rem; }
+
+main { display: block; padding-top: 1.25rem; }
+main:focus { outline: none; }
+
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0.5rem 0 0.75rem; color: var(--navy); }
+@media (min-width: 40rem) { h1 { font-size: 2.2rem; } }
+h2 { font-size: 1.25rem; margin: 1.75rem 0 0.5rem; color: var(--navy); }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 0.4rem; }
+p { margin: 0.7rem 0; }
+ul, ol { margin: 0.7rem 0; padding-left: 1.4rem; }
+li { margin: 0.45rem 0; }
+img { max-width: 100%; height: auto; border-radius: 6px; }
+
+a { color: var(--focus); }
+
+/* Visible focus everywhere */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
+input:focus-visible + label, input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Cards */
+.warn-card, .note-card {
+  border-radius: 8px; padding: 0.8rem 1rem; margin: 1rem 0;
+  border-left: 5px solid;
+}
+.warn-card { background: var(--red-bg); border-color: var(--red); }
+.warn-card::before { content: "Do not"; display: block; font-weight: 700; color: var(--red); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.2rem; }
+.note-card { background: var(--note-bg); border-color: var(--navy); }
+
+/* Progress */
+.progress-block { margin: 1rem 0 1.5rem; }
+.progress-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.35rem; }
+.progress-track {
+  height: 0.75rem; background: var(--card); border: 1px solid var(--line);
+  border-radius: 999px; overflow: hidden;
+}
+.progress-fill { height: 100%; background: var(--navy); border-radius: 999px; transition: width 0.3s; }
+
+/* Module list on contents page */
+.module-list { list-style: none; padding: 0; margin: 1rem 0; }
+.module-list li { margin: 0.5rem 0; }
+.module-link {
+  display: flex; align-items: center; gap: 0.75rem; width: 100%;
+  text-align: left; text-decoration: none;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.85rem 1rem; color: var(--ink); font: inherit; cursor: pointer;
+}
+.module-link:active { transform: translateY(1px); }
+.module-num {
+  flex: none; width: 2rem; height: 2rem; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--navy); color: var(--bg); font-weight: 700; font-size: 0.95rem;
+}
+.module-link.done .module-num { background: var(--green); }
+.module-status { margin-left: auto; font-size: 0.8rem; color: var(--muted); flex: none; }
+.module-link.done .module-status { color: var(--green); font-weight: 700; }
+.module-link.stub { opacity: 0.75; }
+
+/* Buttons */
+.btn {
+  display: inline-block; width: 100%; text-align: center;
+  font: inherit; font-weight: 700;
+  background: var(--navy); color: var(--bg);
+  border: none; border-radius: 10px;
+  padding: 0.9rem 1.2rem; margin: 0.5rem 0; cursor: pointer;
+  min-height: 48px;
+}
+.btn.secondary { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* Practice checks */
+.check {
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 1rem; margin: 1.25rem 0; background: var(--card);
+}
+.check-tag { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 0.3rem; font-weight: 700; }
+.check-q { font-weight: 700; margin: 0 0 0.75rem; }
+.check .opts { list-style: none; margin: 0; padding: 0; }
+.check .opts li { margin: 0.5rem 0; }
+.opt-btn {
+  display: block; width: 100%; text-align: left; font: inherit;
+  background: var(--bg); color: var(--ink);
+  border: 2px solid var(--line); border-radius: 8px;
+  padding: 0.7rem 0.9rem; cursor: pointer; min-height: 48px;
+}
+.opt-btn[aria-pressed="true"] { border-color: var(--navy); }
+.opt-btn.is-right { border-color: var(--green); background: var(--green-bg); }
+.opt-btn.is-wrong { border-color: var(--red); background: var(--red-bg); }
+.check-feedback { margin-top: 0.75rem; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 1rem; }
+.check-feedback.good { background: var(--green-bg); border-left: 5px solid var(--green); }
+.check-feedback.bad { background: var(--red-bg); border-left: 5px solid var(--red); }
+.check-feedback .verdict { font-weight: 700; display: block; margin-bottom: 0.2rem; }
+.check-feedback.good .verdict { color: var(--green); }
+.check-feedback.bad .verdict { color: var(--red); }
+
+/* Module page nav */
+.module-nav { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.crumb { font-size: 0.9rem; color: var(--muted); margin: 0 0 0.25rem; }
+
+/* Details/summary for privacy notice */
+details {
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.6rem 1rem; margin: 1rem 0; background: var(--card);
+}
+summary { font-weight: 700; cursor: pointer; min-height: 40px; display: flex; align-items: center; }
+details[open] summary { margin-bottom: 0.5rem; }
+
+.todo {
+  background: #fff3cd; color: #4d3a00; border-radius: 4px; padding: 0 0.3rem; font-weight: 700;
+}
+@media (prefers-color-scheme: dark) {
+  .todo { background: #4d3f10; color: #ffe08a; }
+}
+
+.assessment-locked { color: var(--muted); }
+
+/* Candidate form */
+.field { margin: 0.9rem 0; }
+.field label { display: block; font-weight: 700; margin-bottom: 0.25rem; }
+.field input {
+  width: 100%; font: inherit; padding: 0.7rem 0.9rem; min-height: 48px;
+  border: 2px solid var(--line); border-radius: 8px;
+  background: var(--bg); color: var(--ink);
+}
+.field input:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+
+/* Assessment paper */
+.exam-q {
+  border: 1px solid var(--line); border-radius: 10px; background: var(--card);
+  padding: 1rem; margin: 1.25rem 0;
+}
+.exam-q legend { font-weight: 700; padding: 0 0.3rem; }
+.exam-num { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.exam-hint { font-size: 0.95rem; color: var(--muted); margin: 0.4rem 0; }
+.exam-opts { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.exam-opts li { display: flex; gap: 0.6rem; align-items: flex-start; margin: 0.55rem 0; }
+.exam-opts input { width: 1.4rem; height: 1.4rem; margin-top: 0.35rem; flex: none; accent-color: var(--navy); }
+.exam-opts label { padding: 0.5rem 0; min-height: 44px; display: block; flex: 1; }
+.order-list { list-style: none; margin: 0.5rem 0 0; padding: 0; counter-reset: ord; }
+.order-item {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: var(--bg); border: 2px solid var(--line); border-radius: 8px;
+  padding: 0.55rem 0.7rem; margin: 0.5rem 0;
+}
+.order-item::before { counter-increment: ord; content: counter(ord) "."; font-weight: 700; color: var(--navy); flex: none; }
+.order-text { flex: 1; }
+.order-btns { display: flex; gap: 0.35rem; flex: none; }
+.order-btns button {
+  font: inherit; min-width: 44px; min-height: 44px; border-radius: 8px;
+  border: 2px solid var(--navy); background: transparent; color: var(--navy); cursor: pointer;
+}
+
+/* Certificate */
+.certificate {
+  border: 6px double var(--navy); border-radius: 6px;
+  padding: 2rem 1.5rem; margin: 1.5rem 0; text-align: center; background: var(--bg);
+}
+.cert-logo { max-width: 180px; margin: 0 auto 1rem; display: block; }
+.certificate h1 { margin: 0 0 1.25rem; }
+.cert-name { font-size: 1.5rem; font-weight: 700; margin: 0.5rem 0 0.1rem; }
+.cert-meta { color: var(--muted); margin-top: 1.25rem; }
+.cert-foot { font-size: 0.85rem; color: var(--muted); margin-top: 1.25rem; }
+
+/* Reference card */
+.refcard h2 { border-bottom: 2px solid var(--navy); padding-bottom: 0.2rem; }
+.refcard ol, .refcard ul { margin: 0.4rem 0; }
+.refcard li { margin: 0.25rem 0; }
+
+/* Print — certificate and reference card */
+@media print {
+  .site-head, .site-foot, .no-print, .skip { display: none !important; }
+  body { font-size: 11pt; color: #000; background: #fff; }
+  .wrap { max-width: none; padding: 0; }
+  .certificate { border-color: #0D2D6E; margin: 2rem auto; max-width: 17cm; }
+  .refcard { font-size: 9.5pt; column-count: 2; column-gap: 1.2rem; }
+  .refcard h1 { column-span: all; font-size: 14pt; }
+  .refcard h2 { font-size: 11pt; break-after: avoid; }
+  .refcard .warn-card, .refcard .note-card { break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+}
