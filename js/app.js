@@ -83,6 +83,50 @@
     return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   }
 
+  function makeDeviceId() {
+    var alphabet = "abcdefghjkmnpqrstvwxyz23456789";
+    var rand = crypto.getRandomValues(new Uint8Array(8));
+    var id = "";
+    for (var i = 0; i < 8; i++) id += alphabet[rand[i] % alphabet.length];
+    return id;
+  }
+
+  /* ---------- progress tracking ----------
+     Fire-and-forget beacons to the tracking endpoint (Google Apps Script).
+     Every beacon carries a full progress snapshot, so the dashboard rebuilds
+     from the latest row per device even if individual beacons are lost. */
+
+  function beacon(event, extra) {
+    if (!CFG.trackingUrl || !state.candidate) return;
+    var avail = availableModules();
+    var done = avail.filter(function (m) { return state.done[m.num]; }).map(function (m) { return m.num; });
+    var best = bestAttempt();
+    var payload = {
+      event: event,
+      id: state.deviceId || "",
+      v: CFG.courseVersion || "",
+      name: state.candidate.name || "",
+      agency: state.candidate.agency || "",
+      mobile: state.candidate.mobile || "",
+      email: state.candidate.email || "",
+      done: done,
+      doneCount: done.length,
+      total: avail.length,
+      attempts: state.attempts.length,
+      best: best ? best.score : "",
+      passed: !!latestPass()
+    };
+    if (extra) Object.keys(extra).forEach(function (k) { payload[k] = extra[k]; });
+    try {
+      fetch(CFG.trackingUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(payload)
+      });
+    } catch (e) { /* never let tracking break the course */ }
+  }
+
   /* ---------- markdown parsing ---------- */
 
   function parseCheck(lines) {
@@ -233,13 +277,59 @@
   }
 
   function privacyHtml() {
+    var tracking = !!CFG.trackingUrl;
     return (
       '<details><summary>What data this course collects, and who sees it</summary>' +
-      "<p>While you study, nothing is collected. Your progress is stored only on this device and is never sent anywhere.</p>" +
-      "<p>When you submit a final assessment result, the following is recorded: your name, your agency or employer, your mobile number, your email address, the date, your attempt number and your score. This is used to evidence that you are competent to work on Project Rose sites, and it is seen by the Celestra project team.</p>" +
+      (tracking
+        ? "<p>When you start the course you enter your name, your agency or employer, your mobile number and your email address. As you work through it, each module you complete and each assessment attempt (date, attempt number, score, pass or fail) is reported to the Celestra project team, who use it to confirm engineers are trained and rosterable for the cutover nights. Nothing else is collected — no location, no browsing data.</p>"
+        : "<p>While you study, nothing is collected. Your progress is stored only on this device and is never sent anywhere.</p>") +
+      "<p>When you submit a final assessment result, the following is recorded: your name, your agency or employer, your mobile number, your email address, the date, your attempt number and your score. This evidences that you are competent to work on Project Rose sites, and it is seen by the Celestra project team.</p>" +
       "<p>The data controller is Celestra Limited, 1–5 James Way, Bletchley, Milton Keynes, MK1 1SU. Records are kept for the duration of the project and a period afterwards <span class=\"todo\">retention period to be confirmed by Celestra</span>. Under UK GDPR you can ask to see, correct or delete your data by contacting the Celestra project team, or via your agency.</p>" +
       "<p>This site uses no cookies and no analytics.</p></details>"
     );
+  }
+
+  /* ---------- identity gate (shown when tracking is enabled) ---------- */
+
+  function needsGate() {
+    return !!CFG.trackingUrl && !state.candidate;
+  }
+
+  function gateView() {
+    var html = [];
+    html.push("<h1>Project Rose — Engineer Training</h1>");
+    html.push(course.intro);
+    html.push("<h2>Before you start</h2>");
+    html.push("<p>Enter your details to begin. Your module completions and assessment results are reported to the Celestra project team — that record is what confirms you are trained and rosterable for the cutover nights.</p>");
+    html.push(privacyHtml());
+    html.push('<form id="gate-form" novalidate>');
+    html.push(fieldHtml("gate-name", "Full name", ""));
+    html.push(fieldHtml("gate-agency", "Agency or employer", ""));
+    html.push(fieldHtml("gate-mobile", "Mobile number", ""));
+    html.push(fieldHtml("gate-email", "Email address", ""));
+    html.push('<p class="assessment-locked" id="gate-error" role="alert" hidden>All four details are needed before you start.</p>');
+    html.push('<button type="submit" class="btn">Start the course</button>');
+    html.push("</form>");
+    return html.join("\n");
+  }
+
+  function wireGate() {
+    var form = document.getElementById("gate-form");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var get = function (id) { return document.getElementById(id).value.trim(); };
+      var cand = { name: get("gate-name"), agency: get("gate-agency"), mobile: get("gate-mobile"), email: get("gate-email") };
+      if (!cand.name || !cand.agency || !cand.mobile || !cand.email) {
+        document.getElementById("gate-error").hidden = false;
+        return;
+      }
+      state.candidate = cand;
+      if (!state.deviceId) state.deviceId = makeDeviceId();
+      saveState(state);
+      beacon("start");
+      render();
+    });
   }
 
   /* ---------- contents view ---------- */
@@ -393,6 +483,7 @@
       completeBtn.addEventListener("click", function () {
         state.done[mod.num] = true;
         saveState(state);
+        beacon("module", { module: mod.num });
         location.hash = "";
       });
     }
@@ -594,6 +685,7 @@
       state.attempts.push(attempt);
       if (!pass) state.retakeBlock = failedModules.slice();
       saveState(state);
+      beacon("attempt", { attempt: attempt.n, score: attempt.score, pass: attempt.pass, ref: attempt.ref });
       exam = { step: "result", attempt: attempt };
       render();
     });
@@ -705,6 +797,16 @@
 
   function render() {
     var hash = location.hash;
+    if (needsGate()) {
+      // no route is reachable until the engineer has identified themselves
+      exam = null;
+      appEl.innerHTML = gateView();
+      document.title = "Project Rose — Engineer Training";
+      wireGate();
+      document.getElementById("main").focus();
+      window.scrollTo(0, 0);
+      return;
+    }
     var m = hash.match(/^#\/m\/(\d+)$/);
     if (m) {
       var num = parseInt(m[1], 10);

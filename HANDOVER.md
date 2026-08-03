@@ -81,6 +81,41 @@ site cannot detect whether the form was actually submitted — the Forms confirm
 screen is the engineer's receipt, and gaps in the spreadsheet must be chased against the
 competency register.
 
+## Progress tracking and the dashboard
+
+When `trackingUrl` is set in `config.js`, the course asks each engineer for their name,
+agency, mobile and email before anything unlocks, then reports each module completion
+and each assessment attempt to a Google Sheet. The dashboard at `dashboard.html` reads
+the same data and shows an engineer-by-module grid, assessment results and overall
+completion. While `trackingUrl` is empty, none of this happens — no gate, no reporting.
+
+One-time setup (about fifteen minutes, done from a Google account — one created with
+the Celestra address is fine):
+
+1. At sheets.google.com create a spreadsheet named "Project Rose training tracking".
+2. Extensions → Apps Script. Delete the sample code and paste in the whole of
+   `tools/apps-script.gs`.
+3. Change `SECRET` at the top to a long random phrase. This is the dashboard access
+   key — treat it like a password.
+4. Deploy → New deployment → type "Web app" → Execute as: **Me** → Who has access:
+   **Anyone** → Deploy, and approve the permissions prompt. Copy the web app URL.
+5. Put that URL in `config.js` as `trackingUrl`, push, and the gate and reporting are
+   live.
+6. Open `dashboard.html` on the course site, enter the SECRET once — it is remembered
+   on that device. Share the dashboard link plus the key only with the project team;
+   the key is the only thing protecting engineer names and progress. The Sheet itself
+   is the raw record — share it (view-only) with whoever needs the audit trail.
+
+Every beacon carries a full progress snapshot, so the dashboard rebuilds from each
+engineer's latest report even when individual posts are lost to bad signal. Identity is
+self-declared — there is no login, so the register is only as honest as the names typed
+in; reconcile against the agency rosters. Beacons are send-and-forget: an engineer who
+studies entirely offline surfaces only when their connection returns and they next
+complete something. To rotate the key, change `SECRET` and redeploy the web app
+(Deploy → Manage deployments → edit → new version).
+
+To see the dashboard without any data or setup: `dashboard.html?demo`.
+
 ## When the installation guide is revised
 
 1. Update the affected modules in `CONTENT.MD` and the reference card.
@@ -112,11 +147,13 @@ reissuing unless the change invalidates prior competency, which is a project dec
 ## Zero-cost confirmation and third-party dependencies
 
 Hosting: GitHub Pages, free for public repositories. Results: Microsoft Forms + Excel
-under the existing Celestra Microsoft 365 account — no extra licence. Certificates: the
-browser's own print-to-PDF. Optional videos: unlisted YouTube (free) — embed slots can be
-added per module in `CONTENT.md` when the videos exist. Total recurring cost: £0.
-Dependencies that could break things: GitHub Pages availability, Microsoft Forms
-availability, and nothing else — no CDNs, no fonts, no analytics, no frameworks.
+under the existing Celestra Microsoft 365 account — no extra licence. Progress tracking:
+Google Apps Script + Google Sheets, free, quotas far above this project's volume.
+Certificates: the browser's own print-to-PDF. Optional videos: unlisted YouTube (free) —
+embed slots can be added per module in `CONTENT.md` when the videos exist. Total
+recurring cost: £0. Dependencies that could break things: GitHub Pages availability,
+Microsoft Forms availability, Google Apps Script availability, and nothing else — no
+CDNs, no fonts, no analytics, no frameworks.
 
 ## If this ever needs SCORM or an LMS
 

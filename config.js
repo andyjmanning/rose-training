@@ -3,7 +3,7 @@
 window.ROSE_CONFIG = {
   // Bump this when CONTENT.md changes after a guide revision. Shown in the
   // footer and printed on every certificate.
-  courseVersion: "0.2 (draft)",
+  courseVersion: "0.3 (draft)",
 
   // The source documents this course was built from.
   builtFrom: "Rose Cut-Over Process Guide v0.01 (draft), Kitchen Printer Cabling Guide v2.1, and Celestra Whitbread Project SOW, 2 March 2026",
@@ -13,6 +13,14 @@ window.ROSE_CONFIG = {
   // manual fallback (reference on screen) only. See HANDOVER.md for how to
   // fill this in once the form is created on the Celestra account.
   resultsFormUrl: "",
+
+  // Progress-tracking endpoint (Google Apps Script web app URL).
+  // Empty = tracking off: no identity gate, no beacons, course works offline-first.
+  // Set it and the course asks each engineer for their details up front and
+  // reports module completions and assessment attempts to the tracking sheet.
+  // Setup steps are in HANDOVER.md; the dashboard at dashboard.html reads the
+  // same endpoint with the access key.
+  trackingUrl: "",
 
   // Assessment settings.
   passMarkPercent: 90,

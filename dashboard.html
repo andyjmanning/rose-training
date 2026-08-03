@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Project Rose — Training Dashboard</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .wrap-wide { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0.8rem; margin: 1.25rem 0; }
+  .tile { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem; }
+  .tile .n { font-size: 1.9rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+  .tile .t { font-size: 0.85rem; color: var(--muted); }
+  .toolbar { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; margin: 1rem 0; }
+  .toolbar input[type="search"] { flex: 1; min-width: 12rem; font: inherit; padding: 0.55rem 0.8rem; border: 2px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); }
+  .toolbar .btn { width: auto; margin: 0; padding: 0.55rem 1rem; min-height: 44px; }
+  .updated { font-size: 0.85rem; color: var(--muted); }
+  .grid-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+  table.grid { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  .grid th, .grid td { padding: 0.5rem 0.55rem; border-bottom: 1px solid var(--line); text-align: center; white-space: nowrap; }
+  .grid th { background: var(--card); position: sticky; top: 0; font-size: 0.78rem; }
+  .grid th.name, .grid td.name { text-align: left; position: sticky; left: 0; background: var(--bg); max-width: 13rem; overflow: hidden; text-overflow: ellipsis; }
+  .grid th.name { background: var(--card); z-index: 2; }
+  .grid td.name strong { display: block; }
+  .grid td.name span { font-size: 0.78rem; color: var(--muted); }
+  .cell-done { color: var(--green); font-weight: 800; }
+  .cell-not { color: var(--line); }
+  .pill { display: inline-block; border-radius: 999px; padding: 0.1rem 0.6rem; font-weight: 700; font-size: 0.8rem; }
+  .pill.pass { background: var(--green-bg); color: var(--green); }
+  .pill.fail { background: var(--red-bg); color: var(--red); }
+  .pill.none { background: var(--card); color: var(--muted); }
+  .mini-track { width: 6.5rem; height: 0.55rem; background: var(--card); border: 1px solid var(--line); border-radius: 999px; overflow: hidden; display: inline-block; vertical-align: middle; }
+  .mini-fill { height: 100%; background: var(--navy); }
+  .setup { max-width: 40rem; }
+  .keyrow { display: flex; gap: 0.6rem; }
+  .keyrow input { flex: 1; font: inherit; padding: 0.6rem 0.8rem; border: 2px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); }
+  .keyrow .btn { width: auto; margin: 0; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap-wide" style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
+    <img class="logo" src="assets/celestra-white.png" alt="Celestra">
+    <span class="project">Project Rose — Training Dashboard</span>
+  </div>
+</header>
+<main id="main" class="wrap-wide" tabindex="-1">
+  <div id="dash"><p>Loading…</p></div>
+</main>
+<footer class="site-foot"><div class="wrap-wide" id="foot"></div></footer>
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var CFG = window.ROSE_CONFIG || {};
+  var dash = document.getElementById("dash");
+  var demo = new URLSearchParams(location.search).has("demo");
+  var moduleTitles = {};
+  var timer = null;
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function getKey() { try { return localStorage.getItem("roseDashKey") || ""; } catch (e) { return ""; } }
+  function setKey(k) { try { localStorage.setItem("roseDashKey", k); } catch (e) {} }
+
+  document.getElementById("foot").textContent =
+    "Private project view — engineer personal data. Do not share the link or the access key beyond the project team.";
+
+  function setupView(msg) {
+    dash.innerHTML =
+      '<div class="setup"><h1>Training dashboard</h1>' +
+      (msg ? '<div class="warn-card"><p>' + esc(msg) + "</p></div>" : "") +
+      (!CFG.trackingUrl && !demo
+        ? '<div class="note-card"><p>No tracking endpoint is configured yet. Set <strong>trackingUrl</strong> in config.js first — the steps are in HANDOVER.md. To see what the dashboard looks like with sample data, <a href="dashboard.html?demo">open the demo view</a>.</p></div>'
+        : '<p>Enter the dashboard access key (the SECRET from the Apps Script). It is stored on this device only.</p>' +
+          '<div class="keyrow"><input id="key" type="password" autocomplete="off" aria-label="Access key">' +
+          '<button class="btn" id="go">Open</button></div>') +
+      "</div>";
+    var go = document.getElementById("go");
+    if (go) go.addEventListener("click", function () {
+      setKey(document.getElementById("key").value.trim());
+      load();
+    });
+  }
+
+  function demoRows() {
+    var names = [["Sam Carter", "Vantage Resourcing"], ["Priya Nair", "Vantage Resourcing"], ["Tom Bloor", "Fieldsmart"],
+      ["Aisha Bello", "Fieldsmart"], ["Marek Kowal", "Celestra"], ["Dee Walsh", "Celestra"], ["Lee Trent", "OnSite Crew"]];
+    var rows = [["Server time", "Event", "Device", "Name", "Agency", "Mobile", "Email", "Module", "Modules done",
+      "Total modules", "Done list", "Attempts", "Best score", "Passed", "This attempt", "This score", "This pass", "Reference", "Course version"]];
+    names.forEach(function (n, i) {
+      var doneCount = [11, 11, 8, 5, 11, 2, 0][i];
+      var done = [];
+      for (var m = 1; m <= 11 && done.length < doneCount; m++) done.push(m);
+      var attempts = [2, 1, 0, 0, 1, 0, 0][i];
+      var best = [95, 90, "", "", 85, "", ""][i];
+      var passed = [true, true, false, false, false, false, false][i];
+      rows.push([new Date(Date.now() - i * 5e6).toISOString(), "module", "dev" + i, n[0], n[1], "07700 900" + (100 + i),
+        n[0].split(" ")[0].toLowerCase() + "@example.com", doneCount, doneCount, 11, done.join(" "),
+        attempts, best, passed ? "yes" : "no", "", "", "", "", "0.3 (draft)"]);
+    });
+    return rows;
+  }
+
+  function load() {
+    dash.innerHTML = "<p>Loading…</p>";
+    if (demo) { renderData(demoRows()); return; }
+    if (!CFG.trackingUrl) { setupView(); return; }
+    if (!getKey()) { setupView(); return; }
+    fetch(CFG.trackingUrl + "?key=" + encodeURIComponent(getKey()), { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j.error) { setKey(""); setupView("The endpoint refused that key. Check it and try again."); return; }
+        renderData(j.rows);
+      })
+      .catch(function (err) {
+        setupView("Could not reach the tracking endpoint (" + (err.message || err) + "). Check your connection and the trackingUrl in config.js.");
+      });
+  }
+
+  function renderData(rows) {
+    var head = rows[0] || [];
+    var col = {};
+    head.forEach(function (h, i) { col[h] = i; });
+    // latest snapshot per device
+    var byDev = {};
+    rows.slice(1).forEach(function (r) {
+      var id = r[col["Device"]];
+      if (!id) return;
+      var t = new Date(r[col["Server time"]]).getTime() || 0;
+      if (!byDev[id] || t >= byDev[id].t) byDev[id] = { t: t, r: r };
+    });
+    var people = Object.keys(byDev).map(function (id) {
+      var r = byDev[id].r;
+      var doneList = String(r[col["Done list"]] || "").split(/\s+/).filter(Boolean).map(Number);
+      return {
+        name: r[col["Name"]], agency: r[col["Agency"]],
+        done: doneList, total: Number(r[col["Total modules"]]) || 11,
+        attempts: Number(r[col["Attempts"]]) || 0,
+        best: r[col["Best score"]] === "" ? null : Number(r[col["Best score"]]),
+        passed: r[col["Passed"]] === "yes",
+        last: byDev[id].t
+      };
+    });
+    people.sort(function (a, b) { return (b.done.length - a.done.length) || String(a.name).localeCompare(String(b.name)); });
+
+    var total = people.length ? people[0].total : 11;
+    var started = people.length;
+    var allModules = people.filter(function (p) { return p.done.length >= p.total; }).length;
+    var passed = people.filter(function (p) { return p.passed; }).length;
+    var avg = started ? Math.round(people.reduce(function (s, p) { return s + p.done.length / p.total; }, 0) / started * 100) : 0;
+
+    var html = [];
+    html.push("<h1>Training dashboard" + (demo ? " — sample data" : "") + "</h1>");
+    html.push('<div class="tiles">' +
+      '<div class="tile"><div class="n">' + started + '</div><div class="t">engineers started</div></div>' +
+      '<div class="tile"><div class="n">' + allModules + '</div><div class="t">all modules complete</div></div>' +
+      '<div class="tile"><div class="n">' + passed + '</div><div class="t">passed the assessment</div></div>' +
+      '<div class="tile"><div class="n">' + avg + '%</div><div class="t">average module progress</div></div></div>');
+    html.push('<div class="toolbar"><input type="search" id="filter" placeholder="Search name or agency" aria-label="Search">' +
+      '<button class="btn secondary" id="refresh">Refresh</button>' +
+      '<span class="updated">Updated ' + new Date().toLocaleTimeString("en-GB") + " · auto-refreshes every 2 minutes</span></div>");
+    html.push('<div class="grid-scroll"><table class="grid"><thead><tr><th class="name">Engineer</th>');
+    for (var m = 1; m <= total; m++) {
+      html.push('<th title="' + esc(moduleTitles[m] || "Module " + m) + '">M' + m + "</th>");
+    }
+    html.push("<th>Attempts</th><th>Assessment</th><th>Progress</th><th>Last seen</th></tr></thead><tbody>");
+    people.forEach(function (p) {
+      html.push('<tr data-search="' + esc((p.name + " " + p.agency).toLowerCase()) + '">');
+      html.push('<td class="name"><strong>' + esc(p.name) + "</strong><span>" + esc(p.agency) + "</span></td>");
+      for (var m2 = 1; m2 <= total; m2++) {
+        var done = p.done.indexOf(m2) !== -1;
+        html.push('<td class="' + (done ? "cell-done" : "cell-not") + '" aria-label="Module ' + m2 + (done ? " complete" : " not complete") + '">' + (done ? "✓" : "·") + "</td>");
+      }
+      html.push("<td>" + (p.attempts || "–") + "</td>");
+      html.push("<td>" + (p.passed
+        ? '<span class="pill pass">PASS ' + p.best + "%</span>"
+        : (p.attempts ? '<span class="pill fail">' + (p.best === null ? "" : p.best + "%") + "</span>" : '<span class="pill none">not sat</span>')) + "</td>");
+      var pct = Math.round(p.done.length / p.total * 100);
+      html.push('<td><span class="mini-track"><span class="mini-fill" style="width:' + pct + '%"></span></span> ' + pct + "%</td>");
+      html.push("<td>" + (p.last ? new Date(p.last).toLocaleString("en-GB", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }) : "–") + "</td></tr>");
+    });
+    if (!people.length) html.push('<tr><td class="name">No activity yet</td></tr>');
+    html.push("</tbody></table></div>");
+    dash.innerHTML = html.join("\n");
+
+    document.getElementById("refresh").addEventListener("click", load);
+    document.getElementById("filter").addEventListener("input", function () {
+      var q = this.value.toLowerCase();
+      dash.querySelectorAll("tbody tr[data-search]").forEach(function (tr) {
+        tr.hidden = q && tr.getAttribute("data-search").indexOf(q) === -1;
+      });
+    });
+    if (timer) clearInterval(timer);
+    if (!demo) timer = setInterval(load, 120000);
+  }
+
+  // module titles for the column tooltips
+  fetch("CONTENT.md", { cache: "no-cache" }).then(function (r) { return r.text(); }).then(function (md) {
+    var re = /^## Module (\d+):\s*(.+)$/gm, m;
+    while ((m = re.exec(md))) moduleTitles[parseInt(m[1], 10)] = m[2].trim();
+  }).finally(load);
+})();
+</script>
+</body>
+</html>
