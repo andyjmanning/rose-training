@@ -111,8 +111,13 @@
     if (demo) { renderData(demoRows()); return; }
     if (!CFG.trackingUrl) { setupView(); return; }
     if (!getKey()) { setupView(); return; }
-    fetch(CFG.trackingUrl + "?key=" + encodeURIComponent(getKey()), { cache: "no-store" })
-      .then(function (r) { return r.json(); })
+    // credentials omitted: with Google session cookies attached, Apps Script
+    // sometimes routes the request into a signed-in context and 404s
+    fetch(CFG.trackingUrl + "?key=" + encodeURIComponent(getKey()), { cache: "no-store", credentials: "omit" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status + " — if this persists, the deployment may still be updating");
+        return r.json();
+      })
       .then(function (j) {
         if (j.error) { setKey(""); setupView("The endpoint refused that key. Check it and try again."); return; }
         renderData(j.rows);
