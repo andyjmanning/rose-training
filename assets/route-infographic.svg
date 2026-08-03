@@ -1,0 +1,65 @@
+<svg width="400" height="280" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" role="img"
+  aria-label="Route from the till through the splitter and comms cabinet to the kitchen printer: lead 1 from Till 1 into the 4-way splitter, lead 2 from the splitter to receipt printer RP 1 IDN1, lead 3 from the splitter to the bar outlet Port 2, lead 4 patching panel 1 port 2 to panel 2 port 3 in the comms cab, lead 5 from the kitchen outlet Port 3 to kitchen printer KP 1 IDN1">
+<style>
+text{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.l{fill:none;stroke:#EFEFF4;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.f1{fill:#403D74}.f2{fill:#4F4C8C}.box-w{fill:#E9E9EE}
+.ts{font-size:11px;font-weight:700;fill:#D6D5E2}
+.tdark{font-size:11px;font-weight:800;fill:#2E2D59}
+.data-e{fill:none;stroke:#0D4527;stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+.data-c{fill:none;stroke:#2FC16B;stroke-width:6.5;stroke-linecap:round;stroke-linejoin:round}
+.pwr-e{fill:none;stroke:#A6A5AE;stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+.pwr-c{fill:none;stroke:#111119;stroke-width:6.5;stroke-linecap:round;stroke-linejoin:round}
+.datafill{fill:#2FC16B}.purp{fill:#582C83}
+</style>
+<rect x="0" y="0" width="400" height="280" rx="10" fill="#0F0E1E"/>
+
+      <!-- BAR 1 -->
+      <rect x="14" y="10" width="372" height="104" rx="8" fill="#3A3768" stroke="#8C8AB4" stroke-width="1.8"/>
+      <text class="ts" x="26" y="26">BAR 1</text>
+      <rect class="f2" x="26" y="34" width="76" height="34" rx="5" stroke="#EFEFF4" stroke-width="2"/>
+      <text class="ts" x="64" y="49" text-anchor="middle" font-size="10">TILL 1</text>
+      <text class="ts" x="64" y="61" text-anchor="middle" font-size="10">BEETLE</text>
+      <path class="pwr-e" d="M102 51 H142"/>
+      <path class="pwr-c" d="M102 51 H142"/>
+      <circle class="purp" cx="122" cy="34" r="9"/><text x="122" y="38" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">1</text>
+      <rect class="box-w" x="142" y="34" width="92" height="34" rx="4" stroke="#8E8D99" stroke-width="2"/>
+      <text class="tdark" x="188" y="55" text-anchor="middle" font-size="10">4-WAY SPLITTER</text>
+      <path class="pwr-e" d="M234 51 H278"/>
+      <path class="pwr-c" d="M234 51 H278"/>
+      <circle class="purp" cx="256" cy="34" r="9"/><text x="256" y="38" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">2</text>
+      <rect class="f2" x="278" y="34" width="94" height="34" rx="5" stroke="#EFEFF4" stroke-width="2"/>
+      <text class="ts" x="325" y="49" text-anchor="middle" font-size="10">RP 1 RECEIPT</text>
+      <text class="ts" x="325" y="61" text-anchor="middle" font-size="10">IDN1</text>
+      <path class="data-e" d="M188 68 V92"/>
+      <path class="data-c" d="M188 68 V92"/>
+      <circle class="purp" cx="212" cy="80" r="9"/><text x="212" y="84" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">3</text>
+      <rect class="datafill" x="150" y="92" width="76" height="18" rx="3" stroke="#fff" stroke-width="2"/>
+      <text x="188" y="105" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">BAR OUTLET · PORT 2</text>
+
+      <path class="l" stroke-dasharray="5 5" d="M188 114 V128"/>
+      <!-- COMMS CAB -->
+      <rect x="14" y="128" width="372" height="70" rx="8" fill="#3A3768" stroke="#8C8AB4" stroke-width="1.8"/>
+      <text class="ts" x="26" y="144">COMMS CAB</text>
+      <rect class="f1" x="120" y="150" width="136" height="18" rx="3" stroke="#EFEFF4" stroke-width="1.8"/>
+      <text class="ts" x="188" y="163" text-anchor="middle" font-size="9">PATCH PANEL 1 · PORT 2</text>
+      <path class="data-e" d="M188 168 V176"/>
+      <path class="data-c" d="M188 168 V176"/>
+      <circle class="purp" cx="272" cy="172" r="9"/><text x="272" y="176" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">4</text>
+      <rect class="f1" x="120" y="176" width="136" height="18" rx="3" stroke="#EFEFF4" stroke-width="1.8"/>
+      <text class="ts" x="188" y="189" text-anchor="middle" font-size="9">PATCH PANEL 2 · PORT 3</text>
+
+      <path class="l" stroke-dasharray="5 5" d="M188 198 V212"/>
+      <!-- KITCHEN -->
+      <rect x="14" y="212" width="372" height="60" rx="8" fill="#3A3768" stroke="#8C8AB4" stroke-width="1.8"/>
+      <text class="ts" x="26" y="228">KITCHEN</text>
+      <rect class="datafill" x="102" y="234" width="90" height="26" rx="3" stroke="#fff" stroke-width="2"/>
+      <text x="147" y="251" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">OUTLET · PORT 3</text>
+      <path class="pwr-e" d="M192 247 H248"/>
+      <path class="pwr-c" d="M192 247 H248"/>
+      <circle class="purp" cx="220" cy="230" r="9"/><text x="220" y="234" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">5</text>
+      <rect class="f2" x="248" y="230" width="112" height="34" rx="5" stroke="#EFEFF4" stroke-width="2"/>
+      <text class="ts" x="304" y="245" text-anchor="middle" font-size="10">KP 1 KITCHEN</text>
+      <text class="ts" x="304" y="257" text-anchor="middle" font-size="10">IDN1</text>
+    
+</svg>

@@ -333,7 +333,9 @@ Four 8-pin sockets, factory labelled T1, RP1, TK1 and spare, left to right. If t
 
 ### The route — bar is the 2s, kitchen is the 3s
 
-![Wiring diagram: at Bar 1, Till 1 connects by USB-to-RJ12 into the 4-way splitter; the splitter connects by RJ45 to wall Port 2, and by RJ12 to the IDN1 port on receipt printer RP 1. In the restaurant comms cabinet, patch panel 1 port 2 links to patch panel 2 port 3. In the kitchen, wall Port 3 connects by RJ12 to the IDN1 port on kitchen printer KP 1](assets/printer-wiring.png)
+![Route infographic, five numbered leads across three rooms: at the bar, lead 1 runs from Till 1 into the 4-way splitter, lead 2 from the splitter to receipt printer RP 1's IDN1 port, and lead 3 from the splitter down to the bar outlet Port 2. In the comms cab, lead 4 patches Panel 1 Port 2 to Panel 2 Port 3. In the kitchen, lead 5 runs from the outlet Port 3 to kitchen printer KP 1's IDN1 port](assets/route-infographic.svg)
+
+Five leads, three rooms. The wall outlets and the cabinet are existing cabling — you are only patching them.
 
 1. The feed lead from Till 1 into splitter socket T1 — nothing new is fitted at the till.
 2. Black RJ12 lead from socket RP1 into the receipt printer's IDN1 port. IDN1, not IDN2 — read the label.
