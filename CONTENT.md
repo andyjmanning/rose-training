@@ -111,7 +111,7 @@ type: single
 
 ### The site is still open when you get there
 
-You arrive at 20:30 and the restaurant will still be trading. That is expected. Sign in as your site pack directs, find the duty manager, introduce yourself, and complete your risk assessment before you start anything.
+You arrive at 20:30 and the restaurant will still be trading. That is expected. Sign in as your site pack directs, scan your site QR code and check in **Arrived on site**, find the duty manager, introduce yourself, and complete your risk assessment before you start anything.
 
 Do the evening handover with the manager before the team leaves:
 
@@ -298,13 +298,17 @@ type: single
 
 ## Module 6: Kitchen printer and splitter
 
-With the KMS gone, orders reach the kitchen through a new kitchen printer — an Epson U220. The receipt printer at the bar already prints: one feed lead runs to it, USB in the till, RJ12 in the printer, usually silver. Tonight you put the splitter box in between and run a new leg to the kitchen.
+With the KMS gone, orders reach the kitchen through a new kitchen printer — an Epson U220. The receipt printer at the bar already prints from a feed lead run from the till. Tonight you put the splitter box in between, re-cable the bar with the numbered leads from your pack, and run a new leg to the kitchen.
 
 ![The till station at the bar: the till on its stand with the existing receipt printer beside it](assets/till-station.jpg)
 
-### Before you change anything
+### Before you change anything — check tills 1 and 2
 
-While the site is closing, check every till and printer on site is working, and report any fault in your group chat before you touch a thing. A fault found before you start is the site's problem; one found after, everyone assumes is yours.
+Before you cable anything, check every piece of kit on tills 1 and 2 is working: the receipt printer, the PED, the cash drawer and the scanner, on each till. A fault found before you start is the site's problem; one found after, everyone assumes is yours.
+
+!! Any fault on tills 1 or 2 is a show stopper — do not start the install. Scan your site QR code and check in **Issue — need help**, then escalate in your group chat.
+
+All working, no faults? Scan your site QR code and check in **Pre-reqs complete**, then carry on.
 
 ### The connectors — six pins, never four
 
@@ -312,14 +316,14 @@ Every printer lead is RJ12, six-pin. Hold each plug to the light and count six g
 
 !! No 4-pin telephone leads. They fit the socket, and the printer stays dead. Six gold contacts, or it does not get plugged in.
 
-Your delivered lead kit: the silver USB-to-RJ12 feed lead is already in place at the till; two black RJ12-to-RJ12 leads (2 m); two RJ45 patch leads, straight not crossover (2 m); and a short patch lead for the comms cabinet. Lay them out and check them before you start, and carry one known-good RJ12 and RJ45 spare.
+Your delivered lead kit is five numbered leads, all 2 m, and the numbers follow you through this module: lead 1 is USB-to-RJ12 (till to splitter), leads 2 and 5 are black RJ12-to-RJ12 (receipt printer and kitchen printer), leads 3 and 4 are green RJ45 patch leads, straight not crossover (bar outlet and comms cabinet). Where the bar run is long, a longer green lead is supplied in the pack instead. Lay them out and check them before you start, and carry one known-good RJ12 and RJ45 spare.
 
 ### The change — four moves
 
-1. Unplug the feed lead's RJ12 end from the receipt printer. The USB end stays in the till. Keep this lead.
-2. Mount the splitter box next to the existing data outlet, somewhere you can reach it again.
-3. The loose RJ12 end goes into splitter socket T1.
-4. New leads: RP1 back to the receipt printer, TK1 on to the bar outlet.
+1. Mount the splitter box next to the existing data outlet, somewhere you can reach it again.
+2. Unplug the old feed lead from the receipt printer — the numbered leads from your pack replace it.
+3. Lead 1: USB end into a spare USB port on the till, RJ12 end into splitter jack 1.
+4. New leads: jack 2 back to the receipt printer, jack 3 on to the bar outlet.
 
 !! If the receipt printer stops printing after this, the fault is what you just did — not the printer.
 
@@ -327,9 +331,9 @@ Your delivered lead kit: the silver USB-to-RJ12 feed lead is already in place at
 
 ![The 4-way splitter box: a white wall-mount unit with four black 8-pin sockets in a row and white punch-down blocks above them](assets/splitter-box.jpg)
 
-Four 8-pin sockets, factory labelled T1, RP1, TK1 and spare, left to right. If the labels have worn off, write them back on. The cores are linked across the white punch-down blocks — that link is the splitter. Do not repunch or move anything on the blocks.
+Four 8-pin jacks, labelled 1 to 4, left to right, before the splitter leaves the warehouse: 1 is the feed in from the till, 2 the receipt printer, 3 the link to the bar outlet, and 4 is spare — leave it empty. Data only, no power. There is nothing to write and nothing to configure inside — the white punch-down blocks are not used.
 
-!! If the blocks are bare, the box has not been made up. Stop and raise it in your group chat.
+!! If a jack label is missing or unreadable, stop and raise it in your group chat — do not guess, and do not relabel anything.
 
 ### The route — bar is the 2s, kitchen is the 3s
 
@@ -337,23 +341,23 @@ Four 8-pin sockets, factory labelled T1, RP1, TK1 and spare, left to right. If t
 
 Five leads, three rooms. The wall outlets and the cabinet are existing cabling — you are only patching them.
 
-1. The feed lead from Till 1 into splitter socket T1 — nothing new is fitted at the till.
-2. Black RJ12 lead from socket RP1 into the receipt printer's IDN1 port. IDN1, not IDN2 — read the label.
-3. RJ45 lead from socket TK1 into the bar outlet's empty jack, Port 2. The lead already in that outlet is the live till network — do not unplug or move it.
-4. In the comms cabinet: patch Panel 1 Port 2 across to Panel 2 Port 3.
-5. In the kitchen: black RJ12 lead from wall Port 3 into the kitchen printer's IDN1. The six-pin plug sits centrally with a gap either side — that is correct, not loose.
+1. Lead 1 from the till into splitter jack 1 — USB end in a spare USB port on the till.
+2. Lead 2, black RJ12, from jack 2 into the receipt printer's IDN1 port. IDN1, not IDN2 — read the label.
+3. Lead 3, green RJ45, from jack 3 into the bar outlet's empty jack, Port 2. The lead already in that outlet is the live till network — do not unplug or move it.
+4. Lead 4, in the comms cabinet: patch Panel 1 Port 2 across to Panel 2 Port 3.
+5. Lead 5, black RJ12, in the kitchen: from wall Port 3 into the kitchen printer's IDN1. The six-pin plug sits centrally with a gap either side — that is correct, not loose.
 
 The structured runs between the bar outlet, the comms cabinet and the kitchen outlet were cabled in the weeks before the night — you are borrowing them as plain copper. You patch and connect only: no new cable is ever run, and nothing is drilled beyond mounting the splitter. A dead or missing outlet is raised in your group chat, not worked around.
 
-If outlet or panel labels are worn or missing, tone them out first — never guess.
+The outlet and patch panel labels were checked at survey, so they should be clear. If one is missing or wrong, stop and raise it in your group chat — never guess.
 
 !! The comms cabinet run carries IDN, not Ethernet. Neither port goes anywhere near a switch — patch it to live kit and nothing works. Touch nothing else in that cabinet.
 
 ### Site the kitchen printer
 
-Flat, dry and cool — away from the fryer, steam, heat and splash. Cable off the walkway, paper roll clear of the underside, black mains lead into a 3-pin socket. Site it, load the roll, plug in the PSU. If the position fails these rules, stop and raise it — do not improvise a new position.
+Flat, dry and cool — away from the fryer, steam, heat and splash. Cable off the walkway, black mains lead into a 3-pin socket. Site it, load the roll so the paper feeds off the underside of the roll — the wrong way round prints blank — and plug in the PSU. If the position fails these rules, stop and raise it — do not improvise a new position.
 
-> To confirm from the test lab: the printer's mains socket location and the paper-roll direction for this model. An addendum comes with your site pack if anything changes.
+> To confirm from the test lab: which mains socket the printer's PSU uses. An addendum comes with your site pack if anything changes.
 
 ### Restart, then prove it
 
@@ -361,29 +365,29 @@ Flat, dry and cool — away from the fryer, steam, heat and splash. Cable off th
 2. Print a receipt at RP 1.
 3. Fire a test order through to KP 1.
 
-Do not sign this job off on the receipt printer alone — the kitchen leg is the job.
+Do not sign this job off on the receipt printer alone — the kitchen leg is the job. Both printed? Scan your site QR code and check in **Testing passed**.
 
 ### Before you move on
 
-Splitter sockets reading T1, RP1, TK1 with the fourth free; panel ports labelled at both ends; photograph the splitter and both panels; record completion via your site QR code; every run clipped or tied so nothing hangs where staff work.
+Splitter jack labels legible, 1 to 4, with jack 4 left free; patch panel port labels legible at both ends; photograph the splitter and both panels; record completion via your site QR code; every run clipped or tied so nothing hangs where staff work.
 
 ### If it does not work
 
-- Kitchen dead, receipt fine: the fault is TK1 onwards — swap lead 5, then 4, then 3.
-- Both dead: the till end — prove the splitter by putting the receipt printer's lead straight onto the USB converter.
-- Receipt dead, kitchen prints: lead 2 out of RP1, or the printer itself.
+- Kitchen dead, receipt fine: the fault is jack 3 onwards — swap lead 5, then 4, then 3.
+- Both dead: the till end — lead 1, the USB port, or the splitter itself.
+- Receipt dead, kitchen prints: lead 2 out of jack 2, or the printer itself.
 - Was working, now dead: the cabinet has been re-patched — check Port 2 to Port 3.
 - Intermittent under load: a trapped or crushed lead — replace it, do not reseat it.
 
-Work back along the numbers. Leave errors on screen, escalate, and never experiment.
+Work back along the numbers. Leave errors on screen, escalate, and never experiment. Still not working? Scan your site QR code and check in **Issue — need help**, then escalate in your group chat.
 
 ```check
-q: Where does the silver feed lead's loose RJ12 end go after you unplug it from the receipt printer?
+q: Where does lead 1 — the USB-to-RJ12 lead — connect?
 type: single
-- [x] Into splitter socket T1 — it is the feed, and everything hangs off it. :: Right. USB end stays in the till, RJ12 end into T1. Nothing new is fitted at the till.
-- [ ] Into the receipt printer's IDN2 port. :: The receipt printer gets a new black RJ12 lead from socket RP1 into IDN1 — the feed lead itself goes into splitter socket T1.
-- [ ] Into the bar wall outlet. :: The bar outlet takes the RJ45 lead from socket TK1. The feed lead goes into T1.
-- [ ] In the bin — it is replaced by new leads. :: Keep it. The feed lead is reused: USB stays in the till, RJ12 end into splitter socket T1.
+- [x] USB end into a spare USB port on the till, RJ12 end into splitter jack 1. :: Right. Lead 1 is the feed, and everything else hangs off it. The old feed lead to the receipt printer is replaced by the numbered leads in your pack.
+- [ ] Into the receipt printer's IDN1 port. :: The receipt printer gets lead 2, from splitter jack 2 into IDN1. Lead 1 runs from the till to jack 1.
+- [ ] From the till into the bar wall outlet. :: The bar outlet takes lead 3, from splitter jack 3. Lead 1 goes from the till into jack 1.
+- [ ] It replaces the patch lead in the comms cabinet. :: The cabinet takes lead 4, green RJ45, panel to panel. Lead 1 is the USB-to-RJ12 feed from the till into jack 1.
 ```
 
 ```check
@@ -649,7 +653,7 @@ It happens — do not just wait on the door, and do not just leave:
 
 !! You leave a site in one of two ways: signed off by the manager, or released by your coordinator with your evidence submitted. There is no third way.
 
-Anything unresolved from the night is already in your group chat — that is how the day team picks it up at their 06:30 handover. When you are released, leave the site secure as agreed at the evening handover, and sign out.
+Anything unresolved from the night is already in your group chat — that is how the day team picks it up at their 06:30 handover. When you are released, leave the site secure as agreed at the evening handover, sign out, and make the last scan of the night on your site QR code: check in **Signed off and off site**.
 
 ```check
 q: When do you fill in the iAuditor report?
@@ -744,18 +748,18 @@ type: single
 
 ### The night in order
 
-1. 20:30 arrive — sign in, evening handover with the manager, agree kit location, find and check the delivery.
+1. 20:30 arrive — sign in, QR check-in "Arrived on site", evening handover with the manager, agree kit location, find and check the delivery.
 2. After close — manager confirms end of day: closing stock, Micros EOD, WBD.
 3. Reboot the Micros server (check the hostname against your site pack), then every till and T&A clock — all on.
 4. KMS sites: shut down the KMS server by Remote Desktop, then power off the controllers.
 5. Check the four retained PEDs — two Lane/3000, two A920. Wrong logo: run the config update. Passcode is in your site pack.
-6. Splitter by the bar data outlet (drill early — guests are asleep). Feed lead into T1, RP1 to receipt printer IDN1, TK1 to bar outlet. Panels: Port 2 to Port 3. Kitchen: Port 3 to KP 1 IDN1. Printer on first, then restart the till.
+6. Check every bit of kit on tills 1 and 2 first — any fault is a show stopper: QR check-in "Issue", escalate, do not start. All good: QR check-in "Pre-reqs complete". Splitter by the bar data outlet (drill early — guests are asleep). Lead 1 from a spare till USB port into jack 1, jack 2 to receipt printer IDN1, jack 3 to bar outlet Port 2. Panels: Port 2 to Port 3. Kitchen: Port 3 to KP 1 IDN1. Paper feeds off the underside of the roll. Printer on first, then restart the till. Both printers print: QR check-in "Testing passed".
 7. PREPARE — everything ON. Then OK, lock the server, shut down every till and clock.
 8. MIGRATE — everything OFF. Touch only the mouse. Then OK, lock, turn everything on. "ISL error File Not Authorized" is the one expected error — OK it.
 9. POST — then close the windows and log off.
 10. Test: Function, Start Till, AGP Test shown, Cancel — then one starter, one main, one dessert, one drink, PAY. Printers print. PEDs: 1p on your own card, refund. Keep every receipt.
 11. De-install per your site pack. Serials into iAuditor. Box, write the Celestra reference, safe location, photo to the project team.
-12. 06:30 — walk the manager through tills, printers, PEDs. Joint sign-off. No manager: evidence complete, tell your coordinator, wait for release.
+12. 06:30 — walk the manager through tills, printers, PEDs. Joint sign-off. No manager: evidence complete, tell your coordinator, wait for release. Last scan of the night: QR check-in "Signed off and off site".
 
 ### Golden rules
 

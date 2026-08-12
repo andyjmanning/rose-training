@@ -3,10 +3,10 @@
 window.ROSE_CONFIG = {
   // Bump this when CONTENT.md changes after a guide revision. Shown in the
   // footer and printed on every certificate.
-  courseVersion: "0.3 (draft)",
+  courseVersion: "0.4 (draft)",
 
   // The source documents this course was built from.
-  builtFrom: "Rose Cut-Over Process Guide v0.01 (draft), Kitchen Printer Cabling Guide v2.1, and Celestra Whitbread Project SOW, 2 March 2026",
+  builtFrom: "Rose Cut-Over Process Guide v0.01 (draft), Rose Kitchen Printer Guide v2 (10 Aug 2026), and Celestra Whitbread Project SOW, 2 March 2026",
 
   // Microsoft Forms pre-filled URL template for results capture.
   // Leave empty until the form exists — the results step then shows the

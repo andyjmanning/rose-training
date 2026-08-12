@@ -196,9 +196,8 @@ LMS without rework.
   "to be confirmed" marker until supplied.
 - What "WBD" stands for in the end-of-day list (Module 4 presents it as-is).
 - Testing procedure after pilot 2 (Module 8 + its six held questions).
-- From the printer cabling guide v2.1: the printer's mains socket location and the
-  paper-roll direction for the model, and whether all splitter boxes arrive made up
-  (bare punch-down blocks = stop and call).
+- From the kitchen printer guide: which mains socket the printer's PSU uses (still
+  marked "to confirm" in guide v2).
 - The Microsoft Forms URL (assessment results capture runs in fallback mode until set —
   note that progress tracking is separate and is now live).
 - Moving the tracking sheet to a Celestra-owned Google account (see the data home
@@ -207,3 +206,12 @@ LMS without rework.
 Resolved 3 August 2026: the receipt printer is existing kit — its feed lead is reused
 through the splitter (printer cabling guide v2.1). Module 6 was rewritten against that
 guide, which also corrected the connector spec: RJ12 six-pin throughout, no RJ11.
+
+Resolved 12 August 2026, from Rose Kitchen Printer Guide v2 (10 Aug): the paper roll
+feeds off the underside; splitter jacks arrive labelled 1–4 with the punch-down blocks
+unused, so the bare-blocks check is gone; the till feed is now a new lead 1 (USB-to-RJ12,
+in the pack) into a spare USB port — the old feed lead is no longer reused, superseding
+the 3 August note above; jack names T1/RP1/TK1 became jacks 1–3; and QR check-ins run
+through the night (Arrived on site, Pre-reqs complete, Issue, Testing passed, Signed off
+and off site). Module 6, Modules 3 and 10 (QR scans), the reference card and questions
+Q23/Q70/Q71 were updated; course v0.4.

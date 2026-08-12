@@ -13,7 +13,7 @@ Module 9 ×2, Module 10 ×2, Module 11 ×3. Pass mark 90%. Module 8 (Testing)
 questions are held out of the live paper until pilot 2 confirms the testing
 procedure.
 
-Live bank: 63 questions. Held back (Module 8): 6.
+Live bank: 65 questions. Held back (Module 8): 6.
 
 | ID | Module | Type | Status | Source | Question |
 |----|--------|------|--------|--------|----------|
@@ -39,7 +39,7 @@ Live bank: 63 questions. Held back (Module 8): 6.
 | Q20 | 6 | image | live | Printer guide v2.1 leads 2/5; wiring diagram | What is the connection marked "?" — from the splitter to the receipt printer's IDN1 port? |
 | Q21 | 6 | single | live | Printer guide v2.1 lead 4 | What is the rule inside the comms cabinet? |
 | Q22 | 6 | single | live | Guide: wiring diagram | In the kitchen, the printer connects from the wall data socket to which port on the printer? |
-| Q23 | 6 | multi | live | Printer guide v2.1 route; wiring diagram | What connects into the splitter box? Select all that apply. |
+| Q23 | 6 | multi | live | Kitchen printer guide v2 steps 10–15; wiring diagram | What connects into the splitter box? Select all that apply. |
 | Q24 | 6 | single | live | SOW 3.1.2; PM answer 13 | A data socket your schematic relies on is dead. What do you do? |
 | Q25 | 7 | order | live | Guide: Script Cut-Over | Put the migration script stages in the order you run them. |
 | Q26 | 7 | single | live | Guide: Script Cut-Over | What state are the tills and T&A clocks in when you select Prepare? |
@@ -86,3 +86,5 @@ Live bank: 63 questions. Held back (Module 8): 6.
 | Q67 | 8 | single | held | PM answer 17 | How is each PED tested? |
 | Q68 | 8 | single | held | Guide: testing screenshots | On a Band 2 site, where are the food categories? |
 | Q69 | 8 | single | held | PM answer 19 | What happens to the receipts from testing? |
+| Q70 | 6 | single | live | Kitchen printer guide v2 step 2 | Before you cable anything at the bar, what must you check — and what if it fails? |
+| Q71 | 6 | single | live | Kitchen printer guide v2 step 8 | Which way does the paper roll load into the kitchen printer? |

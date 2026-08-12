@@ -320,10 +320,10 @@
   "held": false,
   "text": "What connects into the splitter box? Select all that apply.",
   "options": [
-   "The feed lead from Till 1 — USB at the till, RJ12 into socket T1.",
+   "The till, on lead 1 — USB end in a spare USB port, RJ12 end into jack 1.",
    "The KMS controllers.",
-   "The receipt printer's IDN1 port, from socket RP1.",
-   "The bar wall outlet that carries the link towards the kitchen, from socket TK1.",
+   "The receipt printer's IDN1 port, on lead 2 from jack 2.",
+   "The bar wall outlet that carries the link towards the kitchen, on lead 3 from jack 3.",
    "The kitchen printer, directly."
   ],
   "key": "adffd29612c3dc5e51ccab53d4889f82192414120bc0830fd1d53075b3d97638"
@@ -976,5 +976,33 @@
    "Binned once the tests pass."
   ],
   "key": "7c615de7a1bb0b5f0305c4f076bf8db7bba01d35e7e0e1b0823b4a993e24e39b"
+ },
+ {
+  "id": "Q70",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "Before you cable anything at the bar, what must you check — and what if it fails?",
+  "options": [
+   "Nothing — faults are picked up during testing at the end of the night.",
+   "Just that both tills power on.",
+   "Every piece of kit on tills 1 and 2 — receipt printer, PED, cash drawer, scanner. Any fault is a show stopper: do not start the install, check in an Issue on your site QR code and escalate.",
+   "Only the receipt printer, since that is the kit you are re-cabling."
+  ],
+  "key": "d62d09369f57f586f6484a174a0da93375d9851da226157f6f6ba671971a4315"
+ },
+ {
+  "id": "Q71",
+  "module": 6,
+  "type": "single",
+  "held": false,
+  "text": "Which way does the paper roll load into the kitchen printer?",
+  "options": [
+   "So the paper feeds off the top of the roll.",
+   "So the paper feeds off the underside of the roll — the wrong way round prints blank.",
+   "Either way round — the paper prints on both sides.",
+   "It takes fanfold paper, not a roll."
+  ],
+  "key": "e669a25747937b92697dd2bc6424b0552a87c33af410c80ae04ce717c5cb11bd"
  }
 ]
