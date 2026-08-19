@@ -195,9 +195,25 @@ LMS without rework.
 - Retention period for assessment records — privacy notice shows a visible
   "to be confirmed" marker until supplied.
 - What "WBD" stands for in the end-of-day list (Module 4 presents it as-is).
-- Testing procedure after pilot 2 (Module 8 + its six held questions).
+- Whether Module 8 (Testing) now joins the paper: the procedure is confirmed in
+  guide V1.1 and the module and its held questions are rewritten to match, but
+  bringing the questions live (removing " | held", reweighting) is a PM decision.
 - From the kitchen printer guide: which mains socket the printer's PSU uses (still
   marked "to confirm" in guide v2).
+- The full shape of the new escalation route. Curtis's 19 Aug feedback: the ladder
+  changed and everything is raised via the QR code — the course now teaches
+  QR Issue check-in → project team → routed onward (Planet for PED configs,
+  platform engineering for script faults). Whether leads/coordinators keep a
+  formal place in that route needs Curtis's confirmation; "tell your coordinator"
+  is retained for welfare/leaving-site rules meanwhile.
+- Whether Teams + WhatsApp remains the right phone/app requirement (Curtis
+  queried it 19 Aug).
+- Whether Whitbread approve the PED config check happening before close
+  (the course says "before close if Whitbread approve, or around closing time").
+- Two photos need refreshing when available: the Lane/3000 walkthrough (now has a
+  passcode step between Menu and Config that the four photos don't show) and a
+  photo of the real despatched 4-way box (the old stock-style photo was removed;
+  Curtis asked for it to be updated but no new image was supplied).
 - The Microsoft Forms URL (assessment results capture runs in fallback mode until set —
   note that progress tracking is separate and is now live).
 - Moving the tracking sheet to a Celestra-owned Google account (see the data home
@@ -215,3 +231,20 @@ the 3 August note above; jack names T1/RP1/TK1 became jacks 1–3; and QR check-
 through the night (Arrived on site, Pre-reqs complete, Issue, Testing passed, Signed off
 and off site). Module 6, Modules 3 and 10 (QR scans), the reference card and questions
 Q23/Q70/Q71 were updated; course v0.4.
+
+Course v0.5, 19 August 2026 — rebuilt against Rose Cut-Over Process Guide V1.1
+(18 Aug, Curtis E) plus Curtis's feedback of 19 Aug. The big structural changes:
+PED config check moved to before/around close (Module 5, reference card); the
+kitchen printer install moved to after the script; the 4-way box is mounted during
+the pre-requisites (drill or stick pad, near Till 1); new pre-req steps for the MPZ
+file check and bolted-cash-drawer removal; Module 8 rewritten for the released
+testing procedure (mag card sign-in, Coke LRG + goujons + makhani + brownie to
+table 99, three kitchen tickets, ~50p PED payments — not 1p — refunded on wired
+PEDs only, orders voided as Miskey); PED escalation goes to Planet via the project
+office, not Celestra first line; issues raised QR-first to the project team;
+kitchen printer model corrected to U220B; dip-switch check added. Practice-question
+options are now shuffled by the engine (the correct answer was always listed
+first). Assessment: Q10, Q14, Q16, Q18, Q28, Q32, Q33, Q39, Q55, Q58–Q61, Q64–Q68
+rewritten; Q72–Q73 added. The engineer account till login code and the PED passcode
+appear in guide V1.1 but are deliberately kept out of the course ("site pack" /
+"task notes"), per the standing rule that nothing sensitive is published.

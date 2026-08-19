@@ -1,6 +1,6 @@
 # Project Rose — Engineer Training
 
-This course trains you to convert a Whitbread restaurant site to Premier Inn Solus as part of Project Rose. It covers the whole night, in the order you will do it: arrival, pre-requisites, PEDs, the kitchen printer, the migration script, testing, de-install, evidence and handover, and what to do when something goes wrong.
+This course trains you to convert a Whitbread restaurant site to Premier Inn Solus as part of Project Rose. It covers the whole night: arrival, the PED checks, the pre-requisites, the migration script, the kitchen printer, testing, de-install, evidence and handover, and what to do when something goes wrong. The reference card at the end shows the running order of the night — note that the PED checks come early, while the manager is still there, and the kitchen printer is installed after the script has run.
 
 Work through the modules in order. Each one takes a few minutes and ends with two or three practice questions — these are practice, they do not count towards anything. The final assessment at the end is 20 questions with a pass mark of 90%.
 
@@ -27,7 +27,7 @@ Everything else on the removal list in your site pack comes out.
 
 ### The shape of the night
 
-There are three cutover nights: Thursday 3, Monday 7 and Thursday 10 September 2026. You work at one site per night, alone for most of it: arrive at 20:30, hand back to the manager at 06:30. Around 240 sites are being converted across the brands — Beefeater, Brewers Fayre, Table Table, Bar & Block, Cookhouse and the inns. The install is the same at every brand. What varies is mainly what gets removed, and your site pack lists exactly what that is for your site.
+There are three cutover nights: Thursday 3, Monday 7 and Thursday 10 September 2026. You work at one site per night, mostly on your own in the restaurant: arrive at 20:30, hand back to the manager at 06:30. The hotel side has staff working all night, so there is someone in the building if anything urgent is needed. Around 240 sites are being converted across the brands — Beefeater, Brewers Fayre, Table Table, Bar & Block, Cookhouse and the inns. The install is the same at every brand. What varies is mainly what gets removed, and your site pack lists exactly what that is for your site.
 
 You are on your own at the site, but not on your own on the night. You are part of a group of about ten engineers with a lead engineer, coordinators run the night behind them, and Celestra technical support is available remotely throughout. How to reach them — and when — is Module 11.
 
@@ -68,11 +68,16 @@ The kit was delivered three to five days before the night: the new kitchen print
 
 ### What you bring
 
-- Basic hand tools, and power tools to mount the splitter box — a drill/driver and bits.
+- Screwdrivers — cross, flat head and 7mm security bits — snips or scissors, a small pry tool or spudger, and a permanent marker.
+- A drill/driver and bits for mounting the 4-way box (some positions take a stick pad instead).
+- Safety boots.
+- Nice to have: a cable tester, a torch or head torch, and a socket set or pliers for the cash drawers.
 - A charged phone with Microsoft Teams and WhatsApp installed and working. Everything on the night runs through group chats — there are no phone calls, because of the number of sites running at once.
-- A personal contactless bank card. You prove each PED works with a 1p test transaction, refunded immediately. No card means you cannot complete the PED testing.
+- A personal contactless bank card. You prove each PED works with a real test payment — pay only the minimum needed, around 50p — and refund every test transaction on a wired PED before testing is finished. No card means you cannot complete the PED testing.
 - Photo ID, and yourself presentable — you are working inside a trading hotel.
 - Your site pack.
+
+Celestra provide the printer install kit, the site-specific tech pack and the PED bags — they are with the site delivery, not on your bring list.
 
 ### Your site pack
 
@@ -83,10 +88,10 @@ The site pack is specific to your site and it is where the sensitive detail live
 ```check
 q: How do you prove a PED takes payment during testing?
 type: single
-- [x] A 1p transaction on your own contactless card, refunded immediately. :: Right. Bring a personal contactless card — without one you cannot finish the PED testing.
-- [ ] A test card is included in the site delivery. :: No test cards are supplied. The agreed method is your own contactless card, 1p, refunded straight away.
+- [x] A small payment on your own contactless card — the minimum needed, around 50p — refunded on a wired PED before testing is finished. :: Right. Bring a personal contactless card — without one you cannot finish the PED testing. Every test transaction is refunded before you leave.
+- [ ] A test card is included in the site delivery. :: No test cards are supplied. The agreed method is your own contactless card, around 50p, refunded before you finish.
 - [ ] Ask the manager to lend you a card in the morning. :: Testing happens overnight, before the manager returns. The card is yours, and it is on the list of things you must bring.
-- [ ] You do not — PED testing is done remotely. :: PED testing is done by you, on site, with a 1p transaction on your own card.
+- [ ] You do not — PED testing is done remotely. :: PED testing is done by you, on site, with a real payment on your own card.
 ```
 
 ```check
@@ -111,7 +116,7 @@ type: single
 
 ### The site is still open when you get there
 
-You arrive at 20:30 and the restaurant will still be trading. That is expected. Sign in as your site pack directs, scan your site QR code and check in **Arrived on site**, find the duty manager, introduce yourself, and complete your risk assessment before you start anything.
+You arrive at 20:30 and the restaurant will still be trading. That is expected. Check in with the hotel first and get a contractor card, sign in as your site pack directs, scan your site QR code and check in **Arrived on site**, then find the restaurant duty manager, introduce yourself, and complete your risk assessment before you start anything. While the site is still open, walk it: find every till and every T&A clock, so nothing surprises you later.
 
 Do the evening handover with the manager before the team leaves:
 
@@ -121,11 +126,11 @@ Do the evening handover with the manager before the team leaves:
 - Find the kit delivery and check it against your site pack.
 - Confirm how you get out, and how the building is secured, once the team has gone.
 
-The manager and team will cash up and go home. From then on you may be alone on site until the manager returns at 06:30.
+The manager and team will cash up and go home. From then on the restaurant is yours until the manager returns at 06:30 — but you are not strictly alone in the building: the hotel has staff working all night, and they are there if anything urgent is needed.
 
 ### Conduct — you are inside a trading hotel
 
-The restaurant is closing, but the hotel above it is full of sleeping guests, all night. Be quiet, be tidy, and keep noisy work — drilling for the splitter box — as early in the night as you can. The restaurant staff around you at the start of the night may be working their final shifts under the brand; be sensitive about what this project is.
+The restaurant is closing, but the hotel above it is full of sleeping guests, all night. Be quiet, be tidy, and keep noisy work — drilling for the 4-way box, if its position needs a drill rather than a stick pad — as early in the night as you can. The restaurant staff around you at the start of the night may be working their final shifts under the brand; be sensitive about what this project is.
 
 ### Working alone
 
@@ -184,6 +189,25 @@ Ask the manager to confirm all three before they leave.
 2. Confirm you are on the right machine: the hostname is shown on the desktop — check it matches the Micros server name in your site pack.
 3. Reboot the server.
 
+### Check the MPZ files are present
+
+Still on the Micros server, confirm the migration files are there before anything else depends on them:
+
+1. Open File Explorer and go to **D:\Micros\RES\EM\Transport\Receive**.
+2. Confirm both files for your site's new EM ID are present — a **.KEY** file and a **.MPZ** file. The EM ID to look for is in your task notes.
+
+!! Missing or wrongly named MPZ files — raise it to the project team straight away. The migration cannot run without them.
+
+### Remove the bolted-down cash drawers
+
+Cash drawers that are not bolted down come out later, at the de-install. Bolted-down drawers are different: firing a drawer open needs a working till, so they must be dealt with now, before the tills are shut down.
+
+1. Log in to the till with the code in your task notes.
+2. Select **Function**, then **No Sale** — the cash drawer opens.
+3. Remove the drawer.
+
+Any issues, raise them to the project team.
+
 ### Reboot every till and clock
 
 Reboot all tills and all T&A clocks — including the ones that will be de-installed later tonight. After the reboots, everything is on.
@@ -200,9 +224,18 @@ If your site pack says the site has a Kitchen Management System:
 
 The KMS server and controllers come out later, in the de-install (Module 9).
 
+### Mount the 4-way box
+
+The 4-way box (the splitter for the kitchen printer) is mounted now, but not connected — the connecting comes after the script, in Module 6.
+
+- It goes around the position of Till 1, or whichever till your site pack designates.
+- Drill it or stick-pad it somewhere accessible but away from liquids and likely spillages — behind the cash drawer and the side of the till enclosure compartment are common spots.
+- If you are drilling, do it as early as you can — hotel guests are asleep upstairs.
+- Any issues or queries, raise them to the project team.
+
 ### Ready to move on
 
-End of day confirmed. Micros server rebooted. Every till and clock rebooted and on. KMS shut down at KMS sites. Now, and only now, the PED checks and the rest of the night can begin.
+End of day confirmed. Micros server rebooted and MPZ files present. Bolted-down cash drawers fired and removed. Every till and clock rebooted and on. KMS shut down at KMS sites. The 4-way box mounted. The PED configs were already checked before close (Module 5). Scan your site QR code and check in **Pre-reqs complete** — now, and only now, the script can begin.
 
 ```check
 q: The manager is leaving and mentions they have not run end of day — "you can sort that, can't you?" What happens?
@@ -233,7 +266,9 @@ type: single
 
 ## Module 5: PEDs
 
-Four payment devices stay at the site and must end the night running as Premier Inn: two wired Ingenico Lane/3000 and two wireless PAX A920. Every other PED at the site is being removed — that happens in the de-install (Module 9).
+Four payment devices typically stay at the site and must end the night running as Premier Inn: two wired Ingenico Lane/3000 — usually at tills 1 and 2 — and two wireless PAX A920. Check your site pack to confirm which PEDs stay at your site. Every other PED is being removed — that happens in the de-install (Module 9).
+
+This is one of the first jobs of the night: the PED config check and update happens with the restaurant manager, before the site closes if Whitbread approve it, or around closing time — not after the pre-requisites.
 
 !! PED keys are required for PED work. If the keys are not on site, you cannot de-install or install PEDs — raise it in your group chat and carry on with the rest of the night.
 
@@ -248,9 +283,12 @@ This is what a correctly configured PED looks like:
 ### Update a wired PED — Lane/3000
 
 1. Press the Menu button.
-2. Select Config.
-3. Select Update.
-4. Select Config.
+2. Enter the passcode from your site pack.
+3. Select Config.
+4. Select Update.
+5. Select Config.
+
+The PED should now auto-update and restart.
 
 ![Four photos of the Lane/3000 keypad and screen showing the sequence: press the Menu button, select Config, select Update, then select Config](assets/ped-lane3000-steps.jpg)
 
@@ -267,7 +305,7 @@ This is what a correctly configured PED looks like:
 
 ### After the update
 
-The PED should show the Premier Inn logo. If it still shows the old brand after the update, raise it in your group chat — your lead first, then Celestra first line will pick it up remotely. Do not keep re-running the update, and do not experiment with other menus.
+The PED should auto-update, restart and show the Premier Inn logo. If it shows **no configuration update available**, or still shows the old brand, raise it to the project team — it goes to the project office for escalation to Planet, the payment provider. This is not something Celestra can fix remotely. Do not keep re-running the update, and do not experiment with other menus.
 
 ```check
 q: Which PEDs stay at the site after the cutover?
@@ -291,14 +329,14 @@ type: single
 q: You have run the config update on an A920 twice and it still shows the old restaurant logo. What now?
 type: single
 - [ ] Run it a few more times — third time lucky. :: Repeatedly re-running an update that is not taking is experimenting. Two attempts is enough information: raise it.
-- [x] Stop and raise it in your group chat — your lead, then Celestra first line remotely. :: Right. A config that will not take needs remote attention. That is exactly what first line is there for.
+- [x] Stop and raise it to the project team — it needs escalating to Planet, the payment provider. :: Right. A config that will not take — or a "no configuration update available" error — goes through the project office to Planet. Celestra cannot fix it remotely.
 - [ ] Factory reset the PED. :: Never. That is a payment device — a factory reset creates a far bigger problem than a wrong logo. Raise it.
-- [ ] Swap it with one of the PEDs being de-installed. :: The de-installed PEDs are the old estate — they are not spares. Raise it in your group chat.
+- [ ] Swap it with one of the PEDs being de-installed. :: The de-installed PEDs are the old estate — they are not spares. Raise it to the project team.
 ```
 
 ## Module 6: Kitchen printer and splitter
 
-With the KMS gone, orders reach the kitchen through a new kitchen printer — an Epson U220. The receipt printer at the bar already prints from a feed lead run from the till. Tonight you put the splitter box in between, re-cable the bar with the numbered leads from your pack, and run a new leg to the kitchen.
+With the KMS gone, orders reach the kitchen through a new kitchen printer — an Epson U220B. This install happens **after the migration script has run** (Module 7): the 4-way box was mounted during the pre-requisites, and now you connect it, re-cable the bar with the numbered leads from your pack, and run a new leg to the kitchen.
 
 ![The till station at the bar: the till on its stand with the existing receipt printer beside it](assets/till-station.jpg)
 
@@ -320,7 +358,7 @@ Your delivered lead kit is five numbered leads, all 2 m, and the numbers follow 
 
 ### The change — four moves
 
-1. Mount the splitter box next to the existing data outlet, somewhere you can reach it again.
+1. The 4-way box is already mounted from the pre-requisites (Module 4) — around Till 1, or the till your site pack designates.
 2. Unplug the old feed lead from the receipt printer — the numbered leads from your pack replace it.
 3. Lead 1: USB end into a spare USB port on the till, RJ12 end into splitter jack 1.
 4. New leads: jack 2 back to the receipt printer, jack 3 on to the bar outlet.
@@ -328,8 +366,6 @@ Your delivered lead kit is five numbered leads, all 2 m, and the numbers follow 
 !! If the receipt printer stops printing after this, the fault is what you just did — not the printer.
 
 ### Know the splitter box
-
-![The 4-way splitter box: a white wall-mount unit with four black 8-pin sockets in a row and white punch-down blocks above them](assets/splitter-box.jpg)
 
 Four 8-pin jacks, labelled 1 to 4, left to right, before the splitter leaves the warehouse: 1 is the feed in from the till, 2 the receipt printer, 3 the link to the bar outlet, and 4 is spare — leave it empty. Data only, no power. There is nothing to write and nothing to configure inside — the white punch-down blocks are not used.
 
@@ -349,7 +385,7 @@ Five leads, three rooms. The wall outlets and the cabinet are existing cabling �
 
 The structured runs between the bar outlet, the comms cabinet and the kitchen outlet were cabled in the weeks before the night — you are borrowing them as plain copper. You patch and connect only: no new cable is ever run, and nothing is drilled beyond mounting the splitter. A dead or missing outlet is raised in your group chat, not worked around.
 
-The outlet and patch panel labels were checked at survey, so they should be clear. If one is missing or wrong, stop and raise it in your group chat — never guess.
+The outlet and patch panel labels were checked at survey, so they should be clear — but the names themselves vary from site to site, so your site pack schematic is the authority on which ports you are patching. If a label is missing or wrong, stop and raise it in your group chat — never guess.
 
 !! The comms cabinet run carries IDN, not Ethernet. Neither port goes anywhere near a switch — patch it to live kit and nothing works. Touch nothing else in that cabinet.
 
@@ -358,6 +394,13 @@ The outlet and patch panel labels were checked at survey, so they should be clea
 Flat, dry and cool — away from the fryer, steam, heat and splash. Cable off the walkway, black mains lead into a 3-pin socket. Site it, load the roll so the paper feeds off the underside of the roll — the wrong way round prints blank — and plug in the PSU. If the position fails these rules, stop and raise it — do not improvise a new position.
 
 > To confirm from the test lab: which mains socket the printer's PSU uses. An addendum comes with your site pack if anything changes.
+
+### Check the dip switches — check only, before you power up
+
+- **Kitchen printer (U220B):** on the back, by the PSU socket, are red dip switches 1 to 7 — all off except **3 on**. On the underside, undo the DSW cover: **DSW1 all off**, and on **DSW2 switch 1, 2 and 3 on**.
+- **Receipt printer (TM88):** on the back, by the PSU socket, dip switches 1 to 7 — all off except **4 on**.
+
+This is a check, not a change you should normally need to make — if the switches are wildly different from this, raise it before powering on.
 
 ### Restart, then prove it
 
@@ -394,7 +437,7 @@ type: single
 q: A lead in your kit has a plug that fits the printer socket but shows only four gold contacts. What is it, and what do you do?
 type: single
 - [x] A telephone lead — do not use it. Every printer lead must be RJ12 with six gold contacts. :: Right. Four-pin leads fit, and the printer stays dead. Hold every plug to the light and count six contacts before you run a lead.
-- [ ] A fast Ethernet lead — fine for the comms cabinet. :: Ethernet is RJ45, eight pins, and only for the TK1 and panel runs. A four-contact plug in a printer socket is a telephone lead, and it will not work.
+- [ ] A fast Ethernet lead — fine for the comms cabinet. :: Ethernet is RJ45, eight pins, and only for the bar-outlet and panel runs. A four-contact plug in a printer socket is a telephone lead, and it will not work.
 - [ ] It is fine as long as it clicks in. :: It will click in — that is the trap. Four contacts means the printer stays dead. Six gold contacts or it does not get used.
 - [ ] Use it for the kitchen leg only. :: No leg uses it. Printer leads are six-pin RJ12 everywhere.
 ```
@@ -416,7 +459,7 @@ This is the part of the night where the most damage is possible. The rules in th
 
 ### Before you start the script
 
-Every pre-requisite from Module 4 must already be done: end of day completed and confirmed, the Micros server rebooted, every till and T&A clock rebooted and switched on, and the KMS shut down at sites that have one.
+Every pre-requisite from Module 4 must already be done: end of day completed and confirmed, the Micros server rebooted with the MPZ files present, the bolted-down cash drawers fired and removed, every till and T&A clock rebooted and switched on, the KMS shut down at sites that have one, and the 4-way box mounted.
 
 !! Do not start the script if any pre-requisite is not done. If the site has not run end of day, stop and raise it with your coordinator — the script cannot go ahead until it is done.
 
@@ -426,16 +469,16 @@ For Prepare, every till and T&A clock must be switched ON.
 
 1. Log on to the Micros server using the account details in your site pack.
 2. Open File Explorer and go to **C:\Program Files\Whitbread\Scripts\Migration Scripts**.
-3. Right-click **RBC migration** and select **Run as administrator**.
+3. Right-click the **RBC migration** shortcut and select **Run as administrator**. Make sure it is the shortcut you run — not the PowerShell file sitting in the same folder.
 4. Select **Yes** on the User Account Control prompt.
-5. Wait. The script takes between 1 and 10 minutes to open. Two windows should appear: **CMTrace** and the **Migration script** window.
+5. Wait. The script takes between 1 and 10 minutes to open. Two windows should appear: **CMTrace** and the **Migration script** window. Move the CMTrace window now, so you can see it alongside the script window — once Migrate is running you cannot click anything to bring it forward.
 6. Select **Prepare**.
 7. A prompt asks you to confirm a list of actions is complete. Select **Yes** only if every pre-requisite is done. If anything is still outstanding, select **No** — the script window will close, and you finish the pre-requisites before starting again.
-8. When the window says Prepare is complete, select **OK**.
+8. **Wait for the window saying Prepare is now complete**, then select **OK**. Do not lock the server before that window has appeared — lock it early and Prepare is cut off before it finishes.
 9. Lock the Micros server.
 10. Shut down every till and every T&A clock — including the ones being de-installed. Hold down the power button on the right of the till to force it to shut down.
 
-Prepare is now complete.
+Prepare is now complete. Scan your site QR code and check in **Prepare complete**.
 
 ### Stage 2 — Migrate
 
@@ -443,15 +486,16 @@ For Migrate, every till and T&A clock must be OFF. The Micros server does the wo
 
 1. Log back into the Micros server.
 2. Select **Migrate**.
-3. Hands off. Do not touch anything except the mouse, and only to stop the screensaver starting.
+3. Hands off. Wiggle the mouse only, to stop the screensaver starting — nothing else.
 
-!! Once Migrate is running, touch nothing. Do not click, do not close windows, do not restart anything. The only thing you may do is move the mouse to keep the screen awake.
+!! Once Migrate is running, touch nothing. **Wiggle the mouse only — no clicking.** Do not click, do not close windows, do not restart anything.
 
 > If it looks like it has hung, leave it alone for 15–20 minutes before raising it. Slow is normal. Any real problem raises itself automatically inside the program.
 
 4. When Migrate finishes, select **OK** on the completion prompt.
 5. Lock the Micros server.
 6. Turn every till and T&A clock back on and let them boot.
+7. Scan your site QR code and check in **Migrate complete**.
 
 ### The one error that is normal
 
@@ -465,13 +509,15 @@ Any other error is not normal. Leave the message on the screen exactly as it is,
 2. When it finishes, select **OK**. This automatically notifies the support team that the site is complete.
 3. Close the Migration window and CMTrace.
 4. Log off from the Micros server.
+5. Scan your site QR code and check in **POST complete**.
 
-The script is finished. You move on to testing.
+The script is finished. You move on to the kitchen printer install (Module 6), then testing.
 
 ### The golden rules
 
 - Every till and clock ON for Prepare. Every till and clock OFF for Migrate.
-- Once Migrate is running, touch nothing except the mouse.
+- Wait for the Prepare-complete confirmation before locking the server.
+- Once Migrate is running, wiggle the mouse only — never click.
 - Never re-run a script stage that has part-completed. If something stopped halfway, escalate — do not try again.
 - If it looks hung, wait 15–20 minutes before raising it.
 - Leave error messages on the screen and escalate. Never experiment.
@@ -505,80 +551,115 @@ type: single
 
 ## Module 8: Testing
 
-> Provisional: this module is written from the current draft guide and will be confirmed after pilot 2. If anything changes, it reaches you as an addendum before your night. For now, the final assessment does not include questions from this module.
+Testing is how you prove the site can trade in the morning. You run it on every cutover till and every retained PED, in this order: the printer test, the wired PED test, the wireless PED test, then refund every test payment and void every test order. Keep every receipt, and take the photos where the steps say so — they are your evidence at 06:30.
 
-Testing is how you prove the site can trade in the morning. You test solo, overnight, and you keep the evidence — the receipts are what you hand over at 06:30.
+You sign into the tills with the **site mag card**. If no mag card is assigned, the assignment process is in your task notes — allow ten minutes for a newly assigned card to take.
 
-### Confirm each till is ready
+### The printer test — on each till
 
-On each retained till:
+1. Log in to the till using the site mag card, followed by the green tick on the keypad.
+2. When prompted for allergies, select **YES**.
+3. Select **FUNCTION** from the right-hand side menu, then **START TILL**.
+4. Confirm the employee assigned to the mag card is shown on the right-hand side of the screen, then select **Cancel**.
+5. Ring the test order: **DRINK** from the left-hand menu, then **Coke LRG**; then **FOOD**, then **Chicken Goujons, Chicken Makhani and Chocolate Brownie**.
+6. With all four items on, select **PAY**, enter table number **99** on the keypad, select **ENTER**, then **SEND**.
 
-1. Select **Function** from the right-hand side menu.
-2. Select **Start Till**.
-3. Confirm the employee **AGP Test** is shown on the right-hand side of the screen, then select **Cancel**.
+![Till screenshot of a test order containing chicken goujons, chicken makhani, a chocolate brownie and a large Coca-Cola — the four test items rung before PAY, table 99 and SEND](assets/till-test-order.jpg)
 
-![Till screenshots showing the sequence: select Function from the right-hand menu, select Start Till, then confirm the employee AGP Test appears in the assigned employees list on the right before selecting Cancel](assets/till-agp-test.jpg)
+Now check the kitchen: there should be **three tickets** — a starter ticket with the goujons, a mains ticket with the makhani, and a desserts ticket with the brownie. The drinks dispense and receipt printers print their parts too. Three tickets in the kitchen is what proves the new printer leg end to end.
 
-### The test order
+### The wired PED test — each wired PED, around 50p
 
-On each till, ring a test order of exactly four items — **one starter, one main, one dessert and one drink** — then select **PAY**. Four items from four categories is what proves every printer prints what it should.
+Pay only the minimum needed — around 50p per test.
 
-- On Band 2 sites, navigate to Starters, Mains and Desserts from the left-hand side menu.
-- On Band 1 sites, all food items are shown on the food screen.
+1. Sign back into the till with the mag card and select **Begin Table** from the right-hand menu. Enter table **7**.
+2. Select **Drink**, then **Dashes**, then **Blackcurrant**, then **Send**.
+3. Sign back in, select **Pickup Table**, select table 7, then **Pay**.
+4. Select **Card Payment** — the payment pushes through to the wired PED.
+5. Photograph the PED showing the payment, then pay with your own contactless card.
+6. If the cash drawer has opened, close it.
 
-![Till screenshot of a test order containing chicken goujons, chicken makhani, a chocolate brownie and a large Coca-Cola, with instructions to select one starter, one main, one dessert and one drink, then select PAY](assets/till-test-order.jpg)
+### The wireless PED test — each wireless PED, around 50p
 
-Confirm the order prints where it should — the kitchen printer and the bar printer — and keep every receipt.
+1. Begin Table as before, table **97**, one blackcurrant dash, **Send**.
+2. On the wireless PED, swipe the mag card and enter the table number you used.
+3. The order and total appear — select the total, and select **No** to the tip prompt.
+4. The PED prompts to pay: photograph it, then pay with your card.
 
-### Test each PED
+### Refund every test payment — wired PEDs only
 
-On each of the four retained PEDs, take a **1p payment** on your own contactless card and **refund it immediately**. Keep the receipts with the rest of your evidence.
+Refunds can **only** be done on the wired PEDs. Combine all the test transactions into one refund order if you can — otherwise repeat per item.
+
+1. Sign in with the mag card, select **Begin Table**, table **69**.
+2. Select **Drinks**, **Dashes**, **Blackcurrant** — four times, or once per payment being refunded.
+3. Highlight the item in the top left corner, select **Void** and **Refund**, then **Pay**, then **Card transaction**.
+4. The wired PED pops up with the amount and **REFUND** in bold at the top.
+5. Photograph the PED screen, then tap your card to take the refund.
+
+!! Make sure the PED says REFUND before you tap. If it does not, stop and raise it to the project team.
+
+### Void the test orders
+
+For every table still open on the till:
+
+1. Sign in with the mag card and select **Pick Up**, then the table.
+2. Highlight each product line in the top left corner, select **Void**, enter the void as **Miskey**, select **Ok**.
+3. Once everything is removed, select **Pay** and pay the order as a **cash payment of £0.00**.
+4. The cash drawer opens and a receipt prints — keep the receipt, close the drawer.
+
+Testing is now complete. Scan your site QR code and check in **Testing passed**.
 
 ### If a test fails
 
-- A printer that will not print: check power, port and patching against your schematic, then raise it in your group chat — spares are held by the contingency team.
-- A cash drawer not recognised: raise it — first line fix this remotely with a quick config change.
-- Till 1 or Till 2 faulty hardware: raise it straight away. Your coordinator logs it with the hardware supplier as a priority call, the site can trade on the working till, and there is a pre-agreed process to complete the cutover.
+- A printer that will not print: check power, port and patching against your schematic, then raise it to the project team — spares are held by the contingency team.
+- A cash drawer not recognised: raise it to the project team.
+- Till 1 or Till 2 faulty hardware: raise it straight away — it is logged with the hardware supplier as a priority call, the site can trade on the working till, and there is a pre-agreed process to complete the cutover.
 
-!! Never sign the night off to yourself. A failed test is not "probably fine" — it is raised in your group chat, tonight, while support is awake and watching.
+!! Never sign the night off to yourself. A failed test is not "probably fine" — it is raised tonight, while support is awake and watching.
 
 ```check
-q: Why is the test order exactly one starter, one main, one dessert and one drink?
+q: What should the kitchen show after the till test order is sent?
 type: single
-- [x] Four items from four categories proves every printer prints what it should. :: Right. The spread of categories exercises the printing end to end — that is the point of the test order.
-- [ ] It is the cheapest possible order. :: Cost is not the reason — the order is voided as a test. The four categories are chosen to prove every printer prints.
-- [ ] It is the manager's supper. :: The order is a test, rung to prove the printers, evidenced by its receipts.
-- [ ] Any single item would do, four is just tradition. :: One item would not exercise every print route. Four items, four categories, every till.
+- [ ] One combined ticket listing all four items. :: The categories split: three tickets — starter, mains and desserts — is the pass. One combined ticket is not the expected result.
+- [x] Three tickets — starter with the goujons, mains with the makhani, desserts with the brownie. :: Right. Three tickets in the kitchen proves the printer leg and the category routing end to end. The drink prints on the dispense and receipt side.
+- [ ] Nothing — the kitchen printer is only for the morning staff. :: The kitchen printer is exactly what is under test. Three tickets, or the test has failed.
+- [ ] A receipt for the customer. :: The customer receipt is the receipt printer's job. The kitchen check is three tickets across the three food categories.
 ```
 
 ```check
-q: How do you confirm a till is ready before ringing the test order?
+q: How does the till test order start?
 type: single
-- [ ] It powered on, so it is ready. :: Booting is not the check. Function, Start Till, confirm AGP Test is shown, Cancel.
-- [x] Function, then Start Till, confirm the employee AGP Test is shown, then Cancel. :: Right. That confirmation on each retained till comes before the test order.
-- [ ] Sign in as the manager and check the sales report. :: You do not use anyone's sign-in but the test process. Function, Start Till, confirm AGP Test, Cancel.
-- [ ] Ask first line to check it remotely. :: This one is yours: Function, Start Till, AGP Test shown, Cancel — on every retained till.
+- [ ] Function, Start Till, then ring the items with no sign-in. :: You cannot ring anything without signing in. Mag card and green tick first, allergies YES, then the Start Till check, then the items.
+- [ ] Sign in as the manager. :: You use the site mag card, not anyone's personal sign-in.
+- [x] Sign in with the site mag card and the green tick, answer YES to allergies, then Function and Start Till to confirm the assigned employee shows. :: Right. Then ring Coke LRG plus the goujons, makhani and brownie, PAY, table 99, ENTER, SEND.
+- [ ] Ask first line to put the till in test mode. :: There is no remote test mode. Mag card, green tick, allergies YES, Start Till check, then the order.
 ```
 
 ```check
-q: What do you do with the receipts from the test orders and the 1p PED tests?
+q: Where do the refunds of your test payments happen?
 type: single
-- [x] Keep every one — they are the evidence you hand over at 06:30. :: Right. The receipts prove testing happened and worked. They back your iAuditor evidence and the morning handover — and they are the sign-off if the manager is not there.
-- [ ] Bin them once everything works. :: The receipts are the proof. They are kept and handed over as evidence.
-- [ ] Leave them in the till drawer. :: They are your evidence, not the till's. They go with your handover.
-- [ ] Post a photo of them and bin the originals. :: Photographing evidence is good practice, but the instruction is to keep the receipts for the morning handover.
+- [ ] On whichever PED took the payment. :: The wireless PEDs cannot process the refund. Every refund goes through a wired PED.
+- [ ] At the bank, a few days later. :: The refunds happen on site, before testing is finished — that is why you pay only around 50p per test.
+- [x] On a wired PED only — and the PED must say REFUND in bold before you tap your card. :: Right. Combine the test payments into one refund order if you can, check for REFUND at the top of the PED, photograph it, then tap.
+- [ ] Refunds are not needed for test payments. :: Every test payment is refunded. Wired PED, REFUND showing, photo, tap.
 ```
 
 ## Module 9: De-install and kit recovery
 
 The de-install happens after the migration and testing. Your site pack lists exactly what comes out at your site — the list varies by brand and by what the site has.
 
-### What typically comes out
+### Two piles — reuse and WEEE. Pack them separately.
 
-- Surplus PEDs, with their poles, power packs, dongles, patch leads and plates.
-- The KMS server and its controllers, at KMS sites — already shut down in Module 4.
-- The host stand PC or laptop, with its peripherals.
-- Surplus kitchen printers, ops tablets with their docks and power supplies, and QR scanners — where the site has them.
+**Kit that will be reused** — this goes in its own boxes, never mixed with the disposal kit:
+
+- Surplus wireless PEDs with their chargers, and surplus wired PEDs — into the PED bags Celestra provide.
+
+**Kit for WEEE disposal:**
+
+- The host stand and its device and peripherals — check your site pack for confirmation.
+- The restaurant printer, unless your site pack says it is being moved.
+- Each till being removed comes out with its PSU, its printer and printer PSU, its cash drawer, its PED stand and cables, and its patch leads.
+- At KMS sites: every KMS controller, and the KMS server with its power lead from the comms cabinet. **The kitchen screens and their brackets stay on the wall.**
 
 De-installed PEDs are payment devices: handle and record them exactly as briefed. Never leave one unaccounted for.
 
@@ -595,6 +676,8 @@ The retained kit from Module 1 — Tills 1 and 2, the four PEDs, the two bar pri
 5. Count the boxes, photograph them in place, and send the photo to the project team in your group chat.
 
 A courier collects the boxes the next day. The photo and box count are what the collection is scheduled from — no photo, no collection.
+
+When the de-install is done and the boxes are photographed in place, scan your site QR code and check in **De-installs complete**.
 
 ```check
 q: What gets written on every box of de-installed kit?
@@ -635,6 +718,7 @@ The photos that must be in your evidence:
 
 - The boxed kit in its safe location (Module 9).
 - The installed kitchen printer in position.
+- The PED screens photographed during the payment and refund tests (Module 8).
 - Anything your briefing or site pack adds for your site.
 
 Keep the test receipts (Module 8) together — they back the report.
@@ -688,58 +772,59 @@ Something will go wrong somewhere on every cutover night, across hundreds of sit
 
 ### The rules that never change
 
+- Raise everything via your site QR code. The moment something stops you, check in **Issue — need help** — that flags your site to the project team even before you have typed a word.
 - If you are stuck for about ten minutes, escalate. Asking early is professional; struggling in silence is not.
 - Leave error messages on the screen exactly as they are.
 - Never re-run a part-completed script stage. Never power-cycle to "see if it clears".
 - Everything goes through your Teams and WhatsApp groups. No phone calls — hundreds of sites are running at once, and the group chat is the record of the night.
 - Never leave a site without telling your coordinator.
 
-### The ladder
+### The route
 
-1. **Your lead engineer** — first contact, always. Run-book questions, "where does this plug in", anything you would ask a colleague. About ten engineers share one lead, and the lead is working a site too.
-2. **Your coordinator** — if the lead has not resolved it in 10–15 minutes, or for anything that is not technical: site access, no manager, end of day not run, welfare, cover. Coordinators log every issue and route it.
-3. **Celestra first line** — remote technical support: config fixes, cash drawers, printer configuration, script triage. They dial in and fix. Reached through the ladder, not directly.
-4. **Whitbread platform engineering** — build failures, script faults, backend restores. Only Celestra first line raises into this tier, with the site number, the error on screen and what has been tried.
+1. **Scan your site QR code and check in "Issue — need help".** Do this first, for anything that stops you — it puts your site on the project team's board immediately.
+2. **Raise the detail with the project team in your group chat:** the site number, the exact error on the screen, and what you have already tried.
+3. **The project team route it from there** — remote support for config and script triage, a priority call to the hardware supplier for dead till hardware, the project office to Planet for PED configs, and Whitbread platform engineering for build and script faults. You never raise into those tiers directly.
 
 ### The side routes
 
-- **Till 1 or Till 2 hardware dead:** your coordinator logs a priority call with the hardware supplier — four-hour response. The site can trade on the working till meanwhile, and there is a pre-agreed process to complete the cutover.
-- **Site access, no manager, end of day not run, business decisions:** your coordinator raises these to Whitbread's Command and Control — engineers never raise these directly.
+- **Till 1 or Till 2 hardware dead:** the project team log a priority call with the hardware supplier — four-hour response. The site can trade on the working till meanwhile, and there is a pre-agreed process to complete the cutover.
+- **PED config will not update, or "no configuration update available":** the project office escalate to Planet, the payment provider. Celestra cannot fix these remotely.
+- **Site access, no manager, end of day not run, business decisions:** the project team raise these to Whitbread's Command and Control — engineers never raise these directly.
 
 ### The common ones, and where they go
 
-- Script hangs during Migrate: wait 15–20 minutes, touch nothing, then raise it up the ladder.
-- Build or script failure message: leave it on screen, straight up the ladder to first line.
-- Kitchen printer will not test: power, port, patching against your schematic — then lead, then first line. Spares are held by the contingency team.
+- Script hangs during Migrate: wait 15–20 minutes, wiggle the mouse only, then raise it.
+- Build or script failure message: leave it on screen, check in an Issue, raise it to the project team.
+- Kitchen printer will not test: power, port, patching against your schematic — then raise it. Spares are held by the contingency team.
 - Splitter or socket with no connection through it: check the patching against your schematic, then raise it — swap, don't fight it.
-- PED shows the old logo: run the config update from Module 5 — stuck, then lead, then first line.
-- Cash drawer not recognised: raise it — a quick remote config fix for first line.
+- PED shows the old logo or says no update is available: run the config update from Module 5 once more — still stuck, raise it for escalation to Planet.
+- Cash drawer not recognised: raise it to the project team.
 
 ```check
-q: Who is your first call when you are stuck, and how do you reach them?
+q: Something has you stuck. What is your first move?
 type: single
-- [x] Your lead engineer, through the group chat. :: Right. The lead is first contact for everything, always through Teams or WhatsApp — no phone calls on the night.
-- [ ] Celestra first line, directly. :: First line is reached through the ladder — lead, then coordinator, then first line. Start with your lead.
-- [ ] Whitbread Command and Control. :: Engineers never raise to C&C — that is the coordinator's route, for access and business issues.
-- [ ] The site manager. :: The manager went home hours ago, and the escalation route is the ladder in your group chat, starting with your lead.
+- [x] Scan your site QR code and check in "Issue — need help", then raise the detail with the project team in your group chat. :: Right. The QR check-in flags your site immediately; the group chat message carries the detail — site number, exact error, what you tried.
+- [ ] Phone the project team. :: No phone calls on the night. The QR check-in and the group chat are the route.
+- [ ] Raise it to Whitbread platform engineering. :: Engineers never raise into that tier directly — the project team route build and script faults there.
+- [ ] Keep quiet and keep trying until it works. :: Struggling in silence is the one thing the night cannot survive. Ten minutes stuck, escalate.
 ```
 
 ```check
 q: Till 2 is hardware-dead — it will not power on at all. What happens?
 type: single
 - [ ] The night has failed — the site cannot open. :: The site can trade on the working till, the supplier attends on a four-hour priority call, and a pre-agreed process completes the cutover. Raise it and carry on.
-- [x] Raise it — your coordinator logs a priority call with the hardware supplier, and the site trades on the working till meanwhile. :: Right. Dead till hardware is a side route: coordinator to supplier, four-hour response, site trades on the other till.
-- [ ] Swap in one of the de-installed tills. :: The removed kit is the old estate, not spares. The route is the priority hardware call via your coordinator.
+- [x] Raise it — the project team log a priority call with the hardware supplier, and the site trades on the working till meanwhile. :: Right. Dead till hardware is a side route: project team to supplier, four-hour response, site trades on the other till.
+- [ ] Swap in one of the de-installed tills. :: The removed kit is the old estate, not spares. The route is the priority hardware call via the project team.
 - [ ] Open it up and check the fuse. :: You do not repair till hardware on the night. Raise it; the supplier attends on a priority call.
 ```
 
 ```check
-q: Who is allowed to raise an issue to Whitbread platform engineering?
+q: Who raises an issue into Whitbread platform engineering or to Planet?
 type: single
-- [ ] Any engineer, if it looks like a build failure. :: Only Celestra first line raises into that tier — with the site number, the exact error and what has been tried.
-- [x] Only Celestra first line. :: Right. Everything reaches platform engineering through first line, so they see only real build and script failures, properly described.
-- [ ] Your lead engineer. :: Leads escalate to coordinators and first line — the raise into Whitbread platform engineering comes from first line only.
-- [ ] The site manager. :: The manager is not part of the technical escalation ladder at all.
+- [ ] Any engineer, if it looks like a build failure. :: Engineers never raise into those tiers directly — the project team route it, with the site number, the exact error and what has been tried.
+- [x] The project team — engineers never raise into those tiers directly. :: Right. You check in an Issue and give the project team the detail; they route build and script faults to platform engineering and PED config failures to Planet.
+- [ ] Your lead engineer. :: The raise into platform engineering or Planet comes from the project team, not from anyone on site.
+- [ ] The site manager. :: The manager is not part of the technical escalation route at all.
 ```
 
 ## Reference card
@@ -748,23 +833,26 @@ type: single
 
 ### The night in order
 
-1. 20:30 arrive — sign in, QR check-in "Arrived on site", evening handover with the manager, agree kit location, find and check the delivery.
-2. After close — manager confirms end of day: closing stock, Micros EOD, WBD.
-3. Reboot the Micros server (check the hostname against your site pack), then every till and T&A clock — all on.
-4. KMS sites: shut down the KMS server by Remote Desktop, then power off the controllers.
-5. Check the four retained PEDs — two Lane/3000, two A920. Wrong logo: run the config update. Passcode is in your site pack.
-6. Check every bit of kit on tills 1 and 2 first — any fault is a show stopper: QR check-in "Issue", escalate, do not start. All good: QR check-in "Pre-reqs complete". Splitter by the bar data outlet (drill early — guests are asleep). Lead 1 from a spare till USB port into jack 1, jack 2 to receipt printer IDN1, jack 3 to bar outlet Port 2. Panels: Port 2 to Port 3. Kitchen: Port 3 to KP 1 IDN1. Paper feeds off the underside of the roll. Printer on first, then restart the till. Both printers print: QR check-in "Testing passed".
-7. PREPARE — everything ON. Then OK, lock the server, shut down every till and clock.
-8. MIGRATE — everything OFF. Touch only the mouse. Then OK, lock, turn everything on. "ISL error File Not Authorized" is the one expected error — OK it.
-9. POST — then close the windows and log off.
-10. Test: Function, Start Till, AGP Test shown, Cancel — then one starter, one main, one dessert, one drink, PAY. Printers print. PEDs: 1p on your own card, refund. Keep every receipt.
-11. De-install per your site pack. Serials into iAuditor. Box, write the Celestra reference, safe location, photo to the project team.
-12. 06:30 — walk the manager through tills, printers, PEDs. Joint sign-off. No manager: evidence complete, tell your coordinator, wait for release. Last scan of the night: QR check-in "Signed off and off site".
+1. 20:30 arrive — check in with the hotel, get a contractor card, sign in, QR check-in "Arrived on site". Evening handover with the manager, agree the kit location, find and check the delivery.
+2. Before close (if WHB approve) or around it, with the manager: check the retained PEDs — usually two Lane/3000 at tills 1 and 2, two A920; your site pack confirms. Wrong logo: run the config update (passcode in your site pack). "No configuration update available": raise it — project office to Planet.
+3. After close — manager confirms end of day: closing stock, Micros EOD, WBD.
+4. Reboot the Micros server (check the hostname against your site pack). Confirm the two MPZ files — .KEY and .MPZ for your EM ID — in D:\Micros\RES\EM\Transport\Receive.
+5. Fire and remove the bolted-down cash drawers (Function, No Sale). Reboot every till and T&A clock — all on.
+6. KMS sites: shut down the KMS server by Remote Desktop, then power off the controllers.
+7. Mount the 4-way box near Till 1, or the designated till — drill or stick pad, drilling early (guests are asleep). QR check-in "Pre-reqs complete".
+8. PREPARE — everything ON. Run the RBC migration shortcut as administrator — the shortcut, not the PowerShell. Move CMTrace where you can see it. Wait for the Prepare-complete window, then OK, lock the server, shut down every till and clock. QR check-in "Prepare complete".
+9. MIGRATE — everything OFF. Wiggle the mouse only — no clicking. Then OK, lock, turn everything on. "ISL error File Not Authorized" is the one expected error — OK it. QR check-in "Migrate complete".
+10. POST — then close the windows and log off. QR check-in "POST complete".
+11. Kitchen printer. First check every bit of kit on tills 1 and 2 — any fault is a show stopper: QR check-in "Issue", escalate, do not start. Then connect: lead 1 from a spare till USB port to jack 1, jack 2 to receipt printer IDN1, jack 3 to bar outlet, panels patched, kitchen port to KP 1 IDN1. Dip switches: U220B all off except 3; TM88 all off except 4. Paper feeds off the underside. Printer on first, then restart the till.
+12. Test each till: mag card + green tick, allergies YES, Function, Start Till, assigned employee shown, Cancel. Ring Coke LRG + goujons + makhani + brownie, PAY, table 99, SEND — three tickets in the kitchen. Each PED: ~50p on your own card, photo. Refund everything on a wired PED — it must say REFUND. Void the orders as Miskey, pay £0.00 cash. Keep every receipt. QR check-in "Testing passed".
+13. De-install per your site pack — reuse kit (PEDs, in the PED bags) packed separately from WEEE kit. Serials into iAuditor. Box, write the Celestra reference, safe location, photo to the project team. QR check-in "De-installs complete".
+14. 06:30 — walk the manager through tills, printers, PEDs. Joint sign-off. No manager: evidence complete, tell your coordinator, wait for release. Last scan of the night: QR check-in "Signed off and off site".
 
 ### Golden rules
 
 - ON for Prepare. OFF for Migrate.
-- During Migrate touch nothing but the mouse.
+- Wait for the Prepare-complete window before locking the server.
+- During Migrate wiggle the mouse only — no clicking.
 - Never re-run a part-completed script stage.
 - Looks hung? Wait 15–20 minutes before raising.
 - Leave errors on screen. Escalate, never experiment.
@@ -772,17 +860,17 @@ type: single
 
 ### When stuck — about 10 minutes, then escalate
 
-1. Lead engineer — group chat, first call for everything.
-2. Coordinator — access, no manager, EOD not run, welfare, cover.
-3. Celestra first line — remote fixes: config, drawers, printers, script triage.
-4. Whitbread platform engineering — first line raises this, not you.
+1. QR check-in "Issue — need help" — first, for anything that stops you.
+2. Project team, in your group chat: site number, exact error on screen, what you tried.
+3. They route it — hardware supplier priority calls, Planet for PED configs, Whitbread platform engineering for build and script faults. Never raised by you directly.
 
-Teams and WhatsApp only — no phone calls. When raising: site number, exact error on screen, what you tried.
+Teams and WhatsApp only — no phone calls.
 
 ### Do not
 
 - Do not start the script before end of day is confirmed.
-- Do not run cables or drill anything beyond mounting the splitter.
+- Do not run cables or drill anything beyond mounting the 4-way box.
+- Do not lock the Micros server before the Prepare-complete window has appeared.
 - Do not use 4-pin telephone leads — six gold contacts on every printer plug.
 - Do not patch the printer run into a switch — it is IDN, not Ethernet.
 - Do not touch anything in the comms cabinet except your schematic's ports.

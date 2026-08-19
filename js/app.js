@@ -142,6 +142,7 @@
         check.options.push({ text: parts[0].trim(), why: (parts[1] || "").trim(), correct: correct });
       }
     });
+    check.options = shuffle(check.options); // don't let the source order give the answer away
     return check;
   }
 

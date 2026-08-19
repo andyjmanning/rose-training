@@ -132,12 +132,13 @@
   "held": false,
   "text": "Put the Lane/3000 wired PED config update steps in order.",
   "options": [
-   "Select Update",
-   "Select Config",
    "Press the Menu button",
-   "Select Config"
+   "Select Config",
+   "Select Config",
+   "Enter the passcode from your site pack",
+   "Select Update"
   ],
-  "key": "6b232d6f9a0e7694663cad20d171349966969c13960c356e73fb026755322d7d"
+  "key": "ac4993bb9907359dac3144d3702ec377ea9afc8b0d0f9f7abcfc2efaff609330"
  },
  {
   "id": "Q11",
@@ -192,7 +193,7 @@
   "held": false,
   "text": "You have run the config update twice and the PED still shows the old brand. What now?",
   "options": [
-   "Stop and raise it in your group chat — lead first, then first line remotely.",
+   "Stop and raise it to the project team — it is escalated to Planet, the payment provider.",
    "Swap it for one of the de-installed PEDs.",
    "Keep re-running the update until it takes.",
    "Factory reset the device."
@@ -222,7 +223,7 @@
   "options": [
    "Epson TM88.",
    "Zebra ZD420.",
-   "Epson U220.",
+   "Epson U220B.",
    "PAX A920."
   ],
   "key": "0ba43b298972c2bea32248437fe931c6290233c19a5f6d9d153089c74e9b5a2a"
@@ -246,12 +247,12 @@
   "module": 6,
   "type": "single",
   "held": false,
-  "text": "Where is the splitter box mounted?",
+  "text": "Where — and when — is the 4-way box mounted?",
   "options": [
-   "Inside the comms cabinet.",
+   "Inside the comms cabinet, after the script has run.",
    "On the kitchen wall next to the new printer.",
-   "Next to the existing data outlet at the bar, somewhere you can reach it again.",
-   "Left loose behind the till."
+   "During the pre-requisites, around Till 1 or the designated till — drilled or stick-padded somewhere accessible, away from liquids and likely spillages.",
+   "Left loose behind the till — it does not need mounting."
   ],
   "key": "556d5034ae88a6ecd66923994be9695953349d402411a034ae2e04d001ceebeb"
  },
@@ -390,10 +391,10 @@
   "held": false,
   "text": "How is the migration script launched?",
   "options": [
-   "From a USB stick in your kit.",
-   "Right-click \"RBC migration\" in the Migration Scripts folder and select Run as administrator.",
+   "Double-click it like any program.",
+   "Right-click the \"RBC migration\" shortcut in the Migration Scripts folder and select Run as administrator.",
    "First line launch it remotely.",
-   "Double-click it like any program."
+   "Run the PowerShell file sitting in the same folder as administrator."
   ],
   "key": "e0ca8ea30e22032ca89fda2a2a022f3b27f6f7ddcc11312f05134e878220edbc"
  },
@@ -444,12 +445,12 @@
   "module": 7,
   "type": "single",
   "held": false,
-  "text": "Prepare has just completed and you have selected OK. What happens next?",
+  "text": "Prepare is running. What must happen before you lock the Micros server?",
   "options": [
-   "Turn the tills back on.",
-   "Log off and take a break.",
-   "Select Migrate straight away.",
-   "Lock the Micros server, then shut down every till and T&A clock — hold the power button on the right of each till."
+   "Migrate must finish first.",
+   "The tills must be shut down first.",
+   "Nothing — lock it as soon as you have selected Prepare.",
+   "The window saying Prepare is now complete appears and you select OK — lock the server early and Prepare is cut off before it finishes."
   ],
   "key": "b87a6d6320bfe5b1057fd078c973623b7a7e65d542bdfdfffb8874fc7e9ae461"
  },
@@ -461,9 +462,9 @@
   "text": "While Migrate is running, what are you allowed to touch?",
   "options": [
    "The keyboard, to check progress.",
-   "The tills, to get a head start on de-install.",
+   "The mouse, including clicking windows to check on them.",
    "Nothing at all, including the mouse.",
-   "Only the mouse, and only to stop the screensaver starting."
+   "Wiggle the mouse only, to stop the screensaver starting — no clicking, nothing else."
   ],
   "key": "ab363d678c402c427f6116eb58665581b573c7c645d200c15ccc03be7ef27834"
  },
@@ -544,14 +545,15 @@
   "held": false,
   "text": "Which of these are golden rules of the script? Select all that apply.",
   "options": [
-   "Never re-run a script stage that has part-completed.",
-   "Reboot the server if Migrate is slow.",
-   "If it looks hung, wait 15–20 minutes before raising it.",
+   "Wait for the Prepare-complete confirmation before locking the server.",
    "Leave error messages on screen and escalate.",
+   "Never re-run a script stage that has part-completed.",
+   "If it looks hung, wait 15–20 minutes before raising it.",
    "Every till and clock on for Prepare, off for Migrate.",
+   "Reboot the server if Migrate is slow.",
    "Keep the tills on during Migrate so you can watch them convert."
   ],
-  "key": "271b7f18aeae45e0682b7e4712c3f614420b5352e7efc481289bd66d2023380e"
+  "key": "5e22602f662680ae23e337dfe29256a7d3677551606952f113e0a1245725e369"
  },
  {
   "id": "Q40",
@@ -772,12 +774,12 @@
   "module": 11,
   "type": "single",
   "held": false,
-  "text": "You are stuck. Who do you contact first, and how?",
+  "text": "You are stuck. What is your first move?",
   "options": [
-   "Celestra first line, directly.",
-   "Your coordinator, by phone.",
-   "Whitbread Command and Control.",
-   "Your lead engineer, in the group chat."
+   "Phone the project team.",
+   "Raise it directly to Whitbread platform engineering.",
+   "Keep trying quietly until it works.",
+   "Scan your site QR code and check in \"Issue — need help\", then raise the detail with the project team in your group chat."
   ],
   "key": "a38eb7f05dd198ec12daa2f581f0f9d4eebe46f1125c1041e0380628b46740ae"
  },
@@ -814,12 +816,12 @@
   "module": 11,
   "type": "single",
   "held": false,
-  "text": "Which of these goes to your coordinator rather than up the technical ladder?",
+  "text": "A PED reports \"no configuration update available\". Where does that go?",
   "options": [
-   "A cash drawer not recognised in testing.",
-   "A build failure message on the Micros server.",
-   "You cannot get into the site and there is no manager.",
-   "The expected ISL error."
+   "Keep re-running the update until it takes.",
+   "Celestra first line fix it remotely.",
+   "To the project team — the project office escalate it to Planet, the payment provider.",
+   "Nowhere — that message means the PED is already up to date."
   ],
   "key": "62cf2e4893725911b6068d406849388f56244660dd54f84c94390a70d7c5f6c8"
  },
@@ -830,10 +832,10 @@
   "held": false,
   "text": "Who raises issues into Whitbread platform engineering?",
   "options": [
-   "Coordinators, for anything unresolved after an hour.",
-   "Only Celestra first line — with the site number, the error on screen and what has been tried.",
+   "Whoever is closest to the server.",
+   "The project team — engineers never raise into that tier directly.",
    "Any engineer with a build failure.",
-   "Leads, for their group."
+   "The site manager."
   ],
   "key": "7671e2801bcbd29d1d9b49720abcc833b0d3e4c868d2ce767f7d0d3aa37ee646"
  },
@@ -846,7 +848,7 @@
   "options": [
    "You repair it — that is why you carry tools.",
    "You swap in a de-installed till.",
-   "Your coordinator logs a priority call with the hardware supplier — four-hour response — and the site trades on the working till meanwhile.",
+   "The project team log a priority call with the hardware supplier — four-hour response — and the site trades on the working till meanwhile.",
    "The cutover is abandoned."
   ],
   "key": "4096a893b53e23a758bfb173cda7d55fe29aa2eaf94bbf652f426de16304d067"
@@ -859,7 +861,7 @@
   "text": "The kitchen printer will not test. What is the sequence?",
   "options": [
    "Leave it for the day team.",
-   "Check power, port and patching against your schematic, then raise it — lead, then first line. Spares are held by the contingency team.",
+   "Check power, port and patching against your schematic, then check in an Issue and raise it to the project team. Spares are held by the contingency team.",
    "Swap it with the bar printer.",
    "Straight to Whitbread platform engineering."
   ],
@@ -901,7 +903,7 @@
   "text": "What exactly is the test order on each till?",
   "options": [
    "One of everything on the menu.",
-   "One starter, one main, one dessert and one drink, then PAY.",
+   "Coke LRG from Drink, then Chicken Goujons, Chicken Makhani and Chocolate Brownie from Food — PAY, table 99, ENTER, SEND.",
    "A round of drinks.",
    "Any single item."
   ],
@@ -912,12 +914,12 @@
   "module": 8,
   "type": "single",
   "held": true,
-  "text": "Why those four test items?",
+  "text": "What proves the kitchen printer leg after the test order is sent?",
   "options": [
-   "Four items from four categories proves every printer prints what it should.",
-   "It is the manager's standing order.",
-   "Tradition from previous projects.",
-   "They are the cheapest items."
+   "Three tickets in the kitchen — a starter ticket, a mains ticket and a desserts ticket.",
+   "The receipt printer printing at the bar.",
+   "A confirmation message on the till.",
+   "One combined kitchen ticket."
   ],
   "key": "8be841725ee8489a0e634e85737725b94165ba11d2f83e6f52d95ebc21ba9f02"
  },
@@ -926,11 +928,11 @@
   "module": 8,
   "type": "single",
   "held": true,
-  "text": "How do you confirm a till is ready before the test order?",
+  "text": "How do you sign in and confirm a till is ready before the test order?",
   "options": [
    "First line confirm it remotely.",
    "It boots without errors.",
-   "Function, Start Till, confirm the employee AGP Test is shown, then Cancel.",
+   "Site mag card and the green tick, YES to allergies, then Function, Start Till, confirm the assigned employee is shown, and Cancel.",
    "Print a blank receipt."
   ],
   "key": "21fd8fa610e42ef6ed3994016796a3a6dd2c28ae777cb551222625fed9bb9947"
@@ -943,8 +945,8 @@
   "text": "How is each PED tested?",
   "options": [
    "Tap your site pack QR code on it.",
-   "A £10 payment, refunded next week.",
-   "A 1p payment on your own contactless card, refunded immediately — receipts kept.",
+   "A 1p payment, refunded immediately on the same PED.",
+   "A payment of the minimum needed — around 50p — on your own contactless card, photographed on the PED, and refunded on a wired PED before testing is finished.",
    "A test card from the kit box."
   ],
   "key": "6219d26ed8ac776138d020666ca6185ab49054c47d340203c9c5bfe165566160"
@@ -954,12 +956,12 @@
   "module": 8,
   "type": "single",
   "held": true,
-  "text": "On a Band 2 site, where are the food categories?",
+  "text": "Where are the test payments refunded?",
   "options": [
-   "On the second till only.",
-   "All food is on one screen.",
-   "Under the Function menu.",
-   "Starters, Mains and Desserts are navigated from the left-hand side menu."
+   "They are not refunded — 50p is written off.",
+   "On whichever PED took the payment.",
+   "At the bank, automatically, within a few days.",
+   "On a wired PED only — and the PED must show REFUND in bold before you tap your card."
   ],
   "key": "eb27b0b0e46c47d6f5ea209b437b1d0702b0074a81879e0f3fe168218bcc0bf1"
  },
@@ -1004,5 +1006,33 @@
    "It takes fanfold paper, not a roll."
   ],
   "key": "e669a25747937b92697dd2bc6424b0552a87c33af410c80ae04ce717c5cb11bd"
+ },
+ {
+  "id": "Q72",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "What must you confirm in D:\\Micros\\RES\\EM\\Transport\\Receive during the pre-requisites?",
+  "options": [
+   "The migration script itself is saved there.",
+   "Nothing — that folder belongs to the day team.",
+   "That the folder is empty.",
+   "Both migration files for your site's new EM ID — a .KEY file and a .MPZ file. Missing or wrong: raise it to the project team."
+  ],
+  "key": "aaf5f52c0fc57e9811a1b182b709fa07c899789b8224ce33ed660e7f11fe42f8"
+ },
+ {
+  "id": "Q73",
+  "module": 4,
+  "type": "single",
+  "held": false,
+  "text": "Why are the bolted-down cash drawers dealt with during the pre-requisites rather than at the de-install?",
+  "options": [
+   "Firing a drawer open needs a working till — so they are fired and removed before the tills are shut down.",
+   "They are not — all cash drawers come out at the de-install.",
+   "The courier collects them separately.",
+   "They are heavier and need more time."
+  ],
+  "key": "593a82a76328dafb0377b73d9326dc0702674cce2b913f54d03510e949298f0e"
  }
 ]
